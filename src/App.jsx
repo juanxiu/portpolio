@@ -126,7 +126,7 @@ function App() {
       <section className="section case-study-section" id="case-studies" aria-labelledby="case-study-title">
         <div className="section-heading">
           <p className="section-kicker">Case Studies</p>
-          <h2 id="case-study-title">AI 데이터 제품화 경험</h2>
+          <h2 id="case-study-title">기술로 문제를 해결한 경험</h2>
         </div>
         <div className="case-study-content">
           <aside className="fit-callout">

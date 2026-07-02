@@ -1,13 +1,13 @@
 export const profile = {
   name: "Yeonsoo Kim",
   displayName: "김연수",
-  role: "Product Engineer Intern | AI Agent & Data Systems",
+  role: "Product Engineer Intern | AI Product & Data Systems",
   location: "Seoul, Korea",
   headline:
-    "비정형 데이터를 LLM 기반 제품 시스템으로 구조화하고, 사용자 문제를 실제 AI 제품 기능으로 검증합니다.",
-  aboutTitle: "LLM 기반 제품 시스템으로 비정형 데이터를 구조화합니다.",
+    "기술로 문제를 해결하고, 비정형 데이터를 사용자 의사결정을 돕는 AI 제품 시스템으로 구조화합니다.",
+  aboutTitle: "고객의 합리적 결정을 돕는 AI 제품을 만듭니다.",
   summary:
-    "B2B SaaS AI 상담 제품의 고객사 온보딩을 지원하는 사내 AI Agent를 개발하며, 엔터프라이즈 상담 데이터 2만 건 분석을 자동화했습니다. 흩어진 상담 로그와 오응답 사례를 Agent 설정, 개선안, 실행 시나리오로 구조화해 수동 진단 시간을 2-3일에서 30-40분으로 단축했습니다. Agent runtime, retrieval, LLM evaluation, prompt tracing, multi-model routing처럼 실제 운영 환경에서 AI 기능의 품질과 비용을 관리하는 시스템 설계에 관심이 있습니다.",
+    "B2B SaaS AI 상담 제품의 고객사 온보딩을 지원하는 사내 AI Agent를 개발하며, 엔터프라이즈 상담 데이터 2만 건 분석을 자동화했습니다. 흩어진 상담 로그와 오응답 사례를 Agent 설정, 개선안, 실행 시나리오로 구조화해 수동 진단 시간을 2-3일에서 30-40분으로 단축했습니다. 레브잇 PMF팀이 만드는 AI 쇼핑 비서처럼, 복잡한 정보 속에서 사용자가 더 합리적인 결정을 내릴 수 있도록 데이터 구조화, LLM evaluation, retrieval, prompt tracing, 제품 실험을 연결하는 일에 관심이 있습니다.",
   github: "https://github.com/juanxiu",
   linkedin: "https://www.linkedin.com/in/yeonsoo-kim-a70b68286/",
   blog: "https://juanxiu.tistory.com/",
@@ -21,9 +21,9 @@ export const profile = {
   ],
   portrait: "images/portfolio/profile.jpg",
   focus: [
-    "비정형 고객/제품 데이터를 LLM이 활용 가능한 구조화된 지식으로 전환하기",
-    "Agent evaluation, retrieval, prompt tracing을 실제 제품 개선 루프로 연결하기",
-    "사용자 문제 정의부터 AI 기능 구현, 검증, 운영 비용 최적화까지 빠르게 반복하기",
+    "흩어진 고객/상품 정보를 LLM이 활용 가능한 의사결정 지식으로 구조화하기",
+    "Agent evaluation, retrieval, prompt tracing을 제품 개선 루프로 연결하기",
+    "문제 정의부터 AI 기능 구현, 검증, 운영 비용 최적화까지 제로투원으로 빠르게 반복하기",
   ],
   skills: [
     "OpenAI SDK",
@@ -53,7 +53,7 @@ export const profile = {
       role: "Forward Deployed Engineer Intern",
       period: "2026.03 - 2026.06",
       description:
-        "AX팀이 고객사의 상담 데이터를 AI 상담 에이전트 설정과 개선안으로 전환할 수 있도록 사내 AI Agent 개발에 참여했습니다. LG전자, 티오더 등 엔터프라이즈 고객사의 상담 로그, 미해결 상담, 오응답 사례를 분석하고 intent, unresolved case, wrong-answer pattern, API action scenario 단위로 구조화했습니다. 이를 통해 고객사별 개선안과 실행 시나리오를 데모 환경에서 바로 검증할 수 있도록 만들었습니다.",
+        "AX팀이 고객사의 상담 데이터를 AI 상담 에이전트 설정과 개선안으로 전환할 수 있도록 사내 AI Agent 개발에 참여했습니다. LG전자, 티오더 등 엔터프라이즈 고객사의 상담 로그, 미해결 상담, 오응답 사례를 분석하고 intent, unresolved case, wrong-answer pattern, API action scenario 단위로 구조화했습니다. 사용자가 원하는 문제 해결 흐름을 기술적으로 모델링하고, 고객사별 개선안과 실행 시나리오를 데모 환경에서 바로 검증할 수 있도록 만들었습니다.",
       highlights: [
         "엔터프라이즈 고객사의 상담 데이터 약 2만 건 분석을 자동화",
         "상담 로그 분석, 미해결 상담 진단, 오응답 사례 검토 시간을 2-3일에서 30-40분으로 단축",
@@ -70,13 +70,17 @@ export const profile = {
   ],
   caseStudies: [
     {
-      title: "Enterprise Support Data to AI Agent Settings",
-      label: "Data Structuring Case Study",
+      title: "Scattered Support Data to Agent Decisions",
+      label: "Problem Solving with Data",
       description:
-        "고객사 상담 로그가 많아 AI 상담 Agent 설정과 진단이 수동으로 오래 걸리는 문제를, 데이터 구조화와 Agent workflow 설계 문제로 다시 정의했습니다.",
+        "고객사 상담 로그가 많아 AI 상담 Agent 설정과 진단이 수동으로 오래 걸리는 문제를, 기술로 해결해야 할 데이터 구조화와 Agent workflow 설계 문제로 다시 정의했습니다.",
       details: [
         {
-          label: "Input Data",
+          label: "Problem",
+          value: "반복 상담과 미해결 사례 속에서 고객사가 진짜 원하는 해결 흐름을 빠르게 찾기 어려움",
+        },
+        {
+          label: "Input",
           value: "상담 로그, 미해결 상담, 오응답 사례, 고객사 API 실행 시나리오",
         },
         {
@@ -93,13 +97,13 @@ export const profile = {
         },
       ],
       insight:
-        "LLM 제품 품질은 prompt만의 문제가 아니라 데이터 구조, 평가 루프, 사용자 workflow 설계 문제라는 점을 배웠습니다.",
+        "LLM 제품 품질은 prompt만의 문제가 아니라 데이터 구조, 평가 루프, 사용자 workflow 설계 문제라는 점을 배웠습니다. 이 관점은 흩어진 상품명, 이미지, 후기, 상세페이지를 하나의 이해 체계로 통합하는 카탈로그 문제와 맞닿아 있습니다.",
     },
     {
-      title: "Investment Records to AI Reflection",
-      label: "AI Product Experiment Case Study",
+      title: "Investment Records to User Decisions",
+      label: "Zero-to-One AI Product Experiment",
       description:
-        "개인 투자자가 매매 이후 판단 근거를 회고하지 못한다는 문제를 사용자 인터뷰와 대면 UT로 정의하고, 매매 기록과 시장 데이터를 AI 회고 맥락으로 재구성했습니다.",
+        "개인 투자자가 매매 이후 판단 근거를 회고하지 못한다는 문제를 사용자 인터뷰와 대면 UT로 정의하고, 매매 기록과 시장 데이터를 사용자의 다음 의사결정을 돕는 AI 회고 맥락으로 재구성했습니다.",
       details: [
         {
           label: "Input Data",
@@ -119,11 +123,11 @@ export const profile = {
         },
       ],
       insight:
-        "제품 실험에서 LLM 응답 품질은 평가셋, trace, 사용자 피드백이 함께 있어야 반복 개선할 수 있음을 확인했습니다.",
+        "제품 실험에서 LLM 응답 품질은 평가셋, trace, 사용자 피드백이 함께 있어야 반복 개선할 수 있음을 확인했습니다. 작은 팀에서 빠르게 만들고 검증하는 스타트업식 제품 개발을 경험했습니다.",
     },
   ],
   fitStatement:
-    "New Catalog System이 흩어진 상품명, 이미지, 상세페이지, 리뷰를 하나의 상품 이해 체계로 통합하는 문제라면, 저는 흩어진 상담 로그, 미해결 사례, 오응답 패턴, API 실행 시나리오를 AI Agent가 활용 가능한 구조로 바꾼 경험이 있습니다.",
+    "레브잇의 New Catalog System이 흩어진 상품명, 이미지, 상세페이지, 리뷰를 하나의 상품 이해 체계로 통합해 고객의 합리적 의사결정을 돕는 문제라면, 저는 흩어진 상담 로그, 미해결 사례, 오응답 패턴, API 실행 시나리오를 AI Agent가 활용 가능한 구조로 바꾼 경험이 있습니다.",
   projects: [
     {
       name: "Hedge",
@@ -155,7 +159,7 @@ export const profile = {
         },
       ],
       description:
-        "개인 투자자가 매매 이후 판단 근거를 정리하기 어렵다는 문제를 사용자 인터뷰와 대면 UT로 정의하고, 매매 기록과 시장 데이터를 기반으로 개인화된 투자 회고를 생성하는 AI 제품을 기획 및 개발했습니다. 단순한 챗봇이 아니라, 사용자 거래 시점과 시장 데이터를 회고 맥락 단위로 재구성하고 관련 근거만 검색해 응답에 반영하는 AI Agent 흐름을 설계했습니다.",
+        "개인 투자자가 매매 이후 판단 근거를 정리하기 어렵다는 문제를 사용자 인터뷰와 대면 UT로 정의하고, 매매 기록과 시장 데이터를 기반으로 개인화된 투자 회고를 생성하는 AI 제품을 기획 및 개발했습니다. 단순한 챗봇이 아니라, 사용자의 의사결정 맥락을 데이터 단위로 재구성하고 관련 근거만 검색해 응답에 반영하는 AI Agent 흐름을 설계했습니다.",
       highlights: [
         "시장 데이터와 매매 시점을 회고 맥락 단위로 재구성하는 RAG 흐름 설계",
         "Langfuse trace와 LLM-as-a-Judge 평가로 AI 응답 품질 30%에서 70%로 개선",
