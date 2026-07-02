@@ -70,8 +70,8 @@ export const profile = {
   ],
   caseStudies: [
     {
-      title: "Scattered Support Data to Agent Decisions",
-      label: "Problem Solving with Data",
+      title: "상담 로그 분석 자동화",
+      label: "상담 데이터 구조화",
       description:
         "고객사 상담 로그가 많아 AI 상담 Agent 설정과 진단이 수동으로 오래 걸리는 문제를, 기술로 해결해야 할 데이터 구조화와 Agent workflow 설계 문제로 다시 정의했습니다.",
       details: [
@@ -100,8 +100,8 @@ export const profile = {
         "LLM 제품 품질은 prompt만의 문제가 아니라 데이터 구조, 평가 루프, 사용자 workflow 설계 문제라는 점을 배웠습니다. 이 관점은 흩어진 상품명, 이미지, 후기, 상세페이지를 하나의 이해 체계로 통합하는 카탈로그 문제와 맞닿아 있습니다.",
     },
     {
-      title: "Investment Records to User Decisions",
-      label: "Zero-to-One AI Product Experiment",
+      title: "투자 회고 AI 제품 실험",
+      label: "사용자 검증 기반 제품 실험",
       description:
         "개인 투자자가 매매 이후 판단 근거를 회고하지 못한다는 문제를 사용자 인터뷰와 대면 UT로 정의하고, 매매 기록과 시장 데이터를 사용자의 다음 의사결정을 돕는 AI 회고 맥락으로 재구성했습니다.",
       details: [
