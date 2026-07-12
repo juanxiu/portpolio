@@ -50,10 +50,11 @@ function App() {
           {profile.name}
         </a>
         <nav className="nav-links">
-          <a href="#case-studies">Case Studies</a>
           <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
           <a href="#open-source">Open Source</a>
+          <a href="#research">Research</a>
+          <a href="#case-studies">Case Studies</a>
+          <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -123,37 +124,6 @@ function App() {
         <p className="about-text">{profile.summary}</p>
       </section>
 
-      <section className="section case-study-section" id="case-studies" aria-labelledby="case-study-title">
-        <div className="section-heading">
-          <p className="section-kicker">Case Studies</p>
-          <h2 id="case-study-title">기술로 문제를 해결한 경험</h2>
-        </div>
-        <div className="case-study-content">
-          <aside className="fit-callout">
-            <p className="panel-label">Catalog system fit</p>
-            <p>{profile.fitStatement}</p>
-          </aside>
-          <div className="case-study-grid">
-            {profile.caseStudies.map((study) => (
-              <article className="case-study-card" key={study.title}>
-                <p className="card-eyebrow">{study.label}</p>
-                <h3>{study.title}</h3>
-                <p>{study.description}</p>
-                <dl>
-                  {study.details.map((detail) => (
-                    <div key={detail.label}>
-                      <dt>{detail.label}</dt>
-                      <dd>{detail.value}</dd>
-                    </div>
-                  ))}
-                </dl>
-                <p className="case-study-insight">{study.insight}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="section" id="experience" aria-labelledby="experience-title">
         <div className="section-heading">
           <p className="section-kicker">Experience</p>
@@ -186,6 +156,123 @@ function App() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section" id="open-source" aria-labelledby="open-source-title">
+        <div className="section-heading">
+          <p className="section-kicker">Open Source</p>
+          <h2 id="open-source-title">오픈소스 기여</h2>
+        </div>
+        <div className="open-source-list">
+          {profile.openSource.map((item) => (
+            <article className="open-source-item" key={item.name}>
+              <div className="open-source-media">
+                <img src={assetPath(item.image)} alt={item.imageAlt} />
+                {item.secondaryImage ? (
+                  <img src={assetPath(item.secondaryImage)} alt={item.secondaryImageAlt} />
+                ) : null}
+              </div>
+              <div className="open-source-copy">
+                <div className="project-card-header">
+                  <p>{item.type}</p>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${item.name} pull request`}
+                  >
+                    <ArrowUpRight size={18} aria-hidden="true" />
+                  </a>
+                </div>
+                <h3>{item.name}</h3>
+                <p className="card-meta">{item.period}</p>
+                <p>{item.description}</p>
+                <ul className="project-highlights">
+                  {item.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+                <div className="tag-list" aria-label={`${item.name} skills`}>
+                  {item.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+          <aside className="award-callout" aria-label="Open source award">
+            <Award size={20} aria-hidden="true" />
+            <div>
+              <h3>Awards</h3>
+              {profile.awards.map((award) => (
+                <span key={award}>{award}</span>
+              ))}
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section className="section" id="research" aria-labelledby="research-title">
+        <div className="section-heading">
+          <p className="section-kicker">Research</p>
+          <h2 id="research-title">연구</h2>
+        </div>
+        <div className="timeline">
+          {profile.research.map((item) => (
+            <article className="timeline-item" key={item.title}>
+              <div className="timeline-meta">
+                <span>{item.period}</span>
+              </div>
+              <div className="timeline-content">
+                <h3>{item.title}</h3>
+                <p className="company">{item.org}</p>
+                <p className="card-meta">{item.status}</p>
+                <p>{item.description}</p>
+                <ul>
+                  {item.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+                <div className="tag-list" aria-label={`${item.title} skills`}>
+                  {item.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section case-study-section" id="case-studies" aria-labelledby="case-study-title">
+        <div className="section-heading">
+          <p className="section-kicker">Case Studies</p>
+          <h2 id="case-study-title">기술로 문제를 해결한 경험</h2>
+        </div>
+        <div className="case-study-content">
+          <aside className="fit-callout">
+            <p className="panel-label">AI Platform & MLOps fit</p>
+            <p>{profile.fitStatement}</p>
+          </aside>
+          <div className="case-study-grid">
+            {profile.caseStudies.map((study) => (
+              <article className="case-study-card" key={study.title}>
+                <p className="card-eyebrow">{study.label}</p>
+                <h3>{study.title}</h3>
+                <p>{study.description}</p>
+                <dl>
+                  {study.details.map((detail) => (
+                    <div key={detail.label}>
+                      <dt>{detail.label}</dt>
+                      <dd>{detail.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <p className="case-study-insight">{study.insight}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -272,60 +359,6 @@ function App() {
               </div>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="section" id="open-source" aria-labelledby="open-source-title">
-        <div className="section-heading">
-          <p className="section-kicker">Open Source</p>
-          <h2 id="open-source-title">오픈소스 기여</h2>
-        </div>
-        <div className="open-source-list">
-          {profile.openSource.map((item) => (
-            <article className="open-source-item" key={item.name}>
-              <div className="open-source-media">
-                <img src={assetPath(item.image)} alt={item.imageAlt} />
-                {item.secondaryImage ? (
-                  <img src={assetPath(item.secondaryImage)} alt={item.secondaryImageAlt} />
-                ) : null}
-              </div>
-              <div className="open-source-copy">
-                <div className="project-card-header">
-                  <p>{item.type}</p>
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`${item.name} pull request`}
-                  >
-                    <ArrowUpRight size={18} aria-hidden="true" />
-                  </a>
-                </div>
-                <h3>{item.name}</h3>
-                <p className="card-meta">{item.period}</p>
-                <p>{item.description}</p>
-                <ul className="project-highlights">
-                  {item.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
-                <div className="tag-list" aria-label={`${item.name} skills`}>
-                  {item.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
-          <aside className="award-callout" aria-label="Open source award">
-            <Award size={20} aria-hidden="true" />
-            <div>
-              <h3>Awards</h3>
-              {profile.awards.map((award) => (
-                <span key={award}>{award}</span>
-              ))}
-            </div>
-          </aside>
         </div>
       </section>
 
