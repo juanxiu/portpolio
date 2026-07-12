@@ -367,12 +367,19 @@ function App() {
           <p className="section-kicker">Skills</p>
           <h2 id="skills-title">기술 스택</h2>
         </div>
-        <div className="skill-list">
-          {profile.skills.map((skill) => (
-            <span key={skill}>
-              <Code2 size={16} aria-hidden="true" />
-              {skill}
-            </span>
+        <div className="skill-groups">
+          {profile.skillGroups.map((group) => (
+            <div className="skill-group" key={group.label}>
+              <p className="panel-label">{group.label}</p>
+              <div className="skill-list">
+                {group.items.map((skill) => (
+                  <span key={skill}>
+                    <Code2 size={16} aria-hidden="true" />
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
@@ -395,6 +402,13 @@ function App() {
             <h3>Activities</h3>
             {profile.activities.map((activity) => (
               <span key={activity}>{activity}</span>
+            ))}
+          </article>
+          <article>
+            <Award size={20} aria-hidden="true" />
+            <h3>Certifications</h3>
+            {profile.certifications.map((certification) => (
+              <span key={certification}>{certification}</span>
             ))}
           </article>
         </div>
