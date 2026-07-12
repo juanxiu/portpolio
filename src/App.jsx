@@ -228,12 +228,14 @@ function App() {
                 <h3>{item.title}</h3>
                 <p className="company">{item.org}</p>
                 <p className="card-meta">{item.status}</p>
-                <p>{item.description}</p>
-                <ul>
-                  {item.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
+                <div className="research-blocks">
+                  {item.blocks.map((block) => (
+                    <div className="research-block" key={block.label}>
+                      <p className="panel-label">{block.label}</p>
+                      <p>{block.body}</p>
+                    </div>
                   ))}
-                </ul>
+                </div>
                 <div className="tag-list" aria-label={`${item.title} skills`}>
                   {item.tags.map((tag) => (
                     <span key={tag}>{tag}</span>
