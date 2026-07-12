@@ -277,6 +277,12 @@ h1 {
   padding: 20px 22px;
 }
 
+.about-callout {
+  grid-column: 2;
+  margin-top: 8px;
+  max-width: 760px;
+}
+
 .fit-callout p:last-child {
   margin: 0;
   color: #2f2940;

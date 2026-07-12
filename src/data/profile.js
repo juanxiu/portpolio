@@ -126,66 +126,8 @@ export const profile = {
       ],
     },
   ],
-  caseStudies: [
-    {
-      title: "상담 데이터 배치 파이프라인 구축",
-      label: "Data Pipeline",
-      description:
-        "고객사 상담 로그 분석과 AI Agent 설정이 사람 손에 의존해 며칠씩 걸리던 문제를, 데이터 수집-가공-서빙 파이프라인과 운영 모니터링 설계 문제로 재정의했습니다.",
-      details: [
-        {
-          label: "Problem",
-          value: "수만 건의 상담 로그에서 Agent 설정과 개선안을 뽑는 작업이 고객사마다 2-3일씩 소요",
-        },
-        {
-          label: "Input",
-          value: "상담 로그, 미해결 상담, 오응답 사례, 고객사 API 실행 시나리오",
-        },
-        {
-          label: "System",
-          value: "batch embedding pipeline, clustering, model routing, token monitoring, prompt tracing",
-        },
-        {
-          label: "Output",
-          value: "고객사별 Agent 설정, RAG 지식 문서, demo-ready 환경 자동 생성",
-        },
-        {
-          label: "Impact",
-          value: "분석 시간 2-3일에서 30-40분으로 단축, 분류/태깅 비용 60-70% 절감",
-        },
-      ],
-      insight:
-        "AI 품질은 prompt만의 문제가 아니라 데이터 파이프라인, 평가 루프, 운영 모니터링의 문제라는 점을 배웠습니다. 파이프라인이 안정적이어야 그 위의 AI가 신뢰를 얻습니다.",
-    },
-    {
-      title: "투자 회고 AI 제품 실험",
-      label: "Evaluation & Observability",
-      description:
-        "개인 투자자가 매매 이후 판단 근거를 회고하지 못한다는 문제를 사용자 인터뷰와 대면 UT로 정의하고, 매매 기록과 시장 데이터를 사용자의 다음 의사결정을 돕는 AI 회고 맥락으로 재구성했습니다.",
-      details: [
-        {
-          label: "Input Data",
-          value: "매매 기록, 시장 데이터, 주가 데이터",
-        },
-        {
-          label: "System",
-          value: "retrieval pipeline, Langfuse trace, LLM-as-a-Judge evaluation",
-        },
-        {
-          label: "Output",
-          value: "사용자별 투자 판단 근거를 반영한 개인화 회고",
-        },
-        {
-          label: "Impact",
-          value: "AI 응답 품질 30%에서 70%로 개선, App Store 출시",
-        },
-      ],
-      insight:
-        "LLM 응답 품질은 평가셋, trace, 사용자 피드백이 함께 있어야 반복 개선할 수 있음을 확인했습니다. 작은 팀에서 빠르게 만들고 검증하는 제품 개발 사이클을 경험했습니다.",
-    },
-  ],
   fitStatement:
-    "현대오토에버는 그룹사 전체가 쓰는 AI MLOps 플랫폼과 데이터레이크를 만들고 운영합니다. 저는 상담 데이터 2만 건을 배치 파이프라인으로 구조화해 수동 분석 3-4일을 1시간으로 줄였고, 멀티모델 서빙 비용을 라우팅과 모니터링으로 60-70% 절감했으며, Kubernetes 오픈소스 ArgoCD의 조회 병목을 캐시 구조로 개선했습니다. 만드는 AI를 넘어, 운영되는 AI 플랫폼을 만드는 일이 제가 해온 일입니다.",
+    "AI가 조직에서 실제로 쓰이려면 모델보다 데이터 파이프라인과 운영 체계가 먼저 안정되어야 한다고 생각합니다. 상담 데이터 2만 건을 배치 파이프라인으로 구조화해 수동 분석 3-4일을 1시간으로 줄였고, 멀티모델 서빙 비용을 라우팅과 모니터링으로 60-70% 절감했으며, Kubernetes 오픈소스 ArgoCD의 조회 병목을 캐시 구조로 개선했습니다. 만드는 AI를 넘어, 운영되는 AI 플랫폼을 만드는 일이 제가 해온 일입니다.",
   projects: [
     {
       name: "Hedge",

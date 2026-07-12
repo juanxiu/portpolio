@@ -53,7 +53,6 @@ function App() {
           <a href="#experience">Experience</a>
           <a href="#open-source">Open Source</a>
           <a href="#research">Research</a>
-          <a href="#case-studies">Case Studies</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
@@ -122,6 +121,10 @@ function App() {
           <h2 id="about-title">{profile.aboutTitle}</h2>
         </div>
         <p className="about-text">{profile.summary}</p>
+        <aside className="fit-callout about-callout">
+          <p className="panel-label">What I do</p>
+          <p>{profile.fitStatement}</p>
+        </aside>
       </section>
 
       <section className="section" id="experience" aria-labelledby="experience-title">
@@ -244,37 +247,6 @@ function App() {
               </div>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="section case-study-section" id="case-studies" aria-labelledby="case-study-title">
-        <div className="section-heading">
-          <p className="section-kicker">Case Studies</p>
-          <h2 id="case-study-title">기술로 문제를 해결한 경험</h2>
-        </div>
-        <div className="case-study-content">
-          <aside className="fit-callout">
-            <p className="panel-label">AI Platform & MLOps fit</p>
-            <p>{profile.fitStatement}</p>
-          </aside>
-          <div className="case-study-grid">
-            {profile.caseStudies.map((study) => (
-              <article className="case-study-card" key={study.title}>
-                <p className="card-eyebrow">{study.label}</p>
-                <h3>{study.title}</h3>
-                <p>{study.description}</p>
-                <dl>
-                  {study.details.map((detail) => (
-                    <div key={detail.label}>
-                      <dt>{detail.label}</dt>
-                      <dd>{detail.value}</dd>
-                    </div>
-                  ))}
-                </dl>
-                <p className="case-study-insight">{study.insight}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
