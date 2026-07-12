@@ -585,6 +585,16 @@ h1 {
   gap: 10px;
 }
 
+.skill-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skill-group .panel-label {
+  margin: 0 0 12px;
+}
+
 .tag-list {
   margin-top: 22px;
 }
