@@ -1,6 +1,6 @@
-# Revitt PE Portfolio
+# Portfolio
 
-React + Vite로 만든 레브잇 Product Engineer 인턴십 맞춤 포트폴리오입니다. 기존 `juanxiu/website` 포트폴리오와 분리된 새 GitHub Pages 배포를 기준으로 설정되어 있습니다.
+React + Vite로 만든 개인 포트폴리오입니다. 데이터 파이프라인, MLOps, LLM 추론 효율화 중심의 AI Engineer 경험을 정리했습니다.
 
 ## Local development
 
