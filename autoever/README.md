@@ -4,7 +4,7 @@
 - 지원 분야: 2026년 4분기 Platform Engineer · 컨테이너 플랫폼 구축 및 운영
 - 작성 기준: 제출용 자기소개서 v3, 경험 정리, 공개 PR 검토, 2026-10-12 사용자 추가 확인
 - 추가 확인: GCP 수집 서비스 / AWS 백엔드 / 서로 다른 EC2의 블루그린 배포
-- 졸업프로젝트는 Safe Path와 다른 프로젝트다. 고유 이름은 확인되지 않아 기능으로 제목을 작성했다.
+- 졸업프로젝트는 Safe Path와 다른 프로젝트다. 사용자가 주제를 실시간 결제 시스템으로 확인했다.
 
 ## 로컬 실행과 빌드
 
@@ -36,7 +36,7 @@ npm run preview
 - OSS: #525 일반 조회 캐시 / 업데이트 직접 조회, #574 Redis 방향 Egress TCP 6379와 Helm·Kustomize. #549·#603·#607은 추가 기여로 표시한다.
 - 성능: 100개 Application 조회 실험의 약 19초 → 0.421ms, 호출 300 → 200. 본인 측정·발표 수치이며 전체 서비스 개선율이 아니다.
 - Operator: 스터디 구현. CRD·CR·Reconcile·Deployment 관계와 상태 확인·알림을 설명한다. 실제 probe 설정 수정, 자동 복구, 사용하지 않은 테스트 도구는 추가하지 않는다.
-- 졸업프로젝트: 독립 배포, gRPC, AWS·GCP, Docker 구성, GitHub Actions, 30분 → 10분 배포, 별도 EC2와 대상 그룹 전환. GCP 실행 제품·이미지 저장소·VPN·자동 롤백·실측 중단 시간은 미확인이다.
+- 졸업프로젝트: 독립 배포, gRPC, AWS·GCP, Docker 구성, GitHub Actions, 30분 → 10분 배포, CodeBuild·CodeDeploy, 별도 EC2와 대상 그룹 전환. GCP 실행 제품·이미지 저장소·VPN·자동 롤백·실측 중단 시간은 미확인이다.
 - 홈서버: Proxmox Linux VM, Tailscale/MagicDNS, CPU 부하와 실제 사용률 기반 n8n/Slack 알림. 별도 DB 버전의 BIND·SSH 터널 사례는 옮기지 않았다.
 - 인턴: 시스템 연동과 고객의 직접 활용 지원. 처리 성공률 평균 약 20% → 80%, 도입 기간 6주 → 4주. 클러스터 운영 성과로 확대하지 않는다.
 
@@ -73,3 +73,18 @@ draw.io 원본이 편집 기준이다. AWS의 EC2·RDS·Elastic Load Balancing �
 - Prometheus API 호출 측정 이미지는 본문에 노출한다. 조회 시간은 별도로 측정한 지표이며 그래프 수치와 혼동하지 않는다.
 - MUSAI를 보조 프로젝트로 추가했다. 예약·재고 동시성 제어와 Sentry는 기존 DX 기록을, 장학금 300만 원은 사용자 확인을 따른다. Hedge는 기존 페이지에 보존한다.
 - MUSAI 서비스 이미지는 기존 프로젝트 원본을 유지한다. 장학금은 수혜 성과로 표현하며 대회 수상이나 인프라 성능 평가로 확대하지 않는다.
+
+
+## 추가 수정 — 본문과 배포 구조
+
+- 첫 화면 제목은 Yeonsoo Kim, 직무 표기는 플랫폼 엔지니어로 구성한다.
+- 상단 대형 성과 요약과 MEASURED RESULT 카드를 삭제했다. 조회 성과와 PR 병합 수는 오픈소스의 기여 성과 불렛으로 표시한다.
+- 한국IT비즈니스진흥협회장상은 오픈소스 기여 영역에만 기록한다. 기존 확인된 정식 상명을 유지한다.
+- Operator와 실시간 결제 시스템은 구현 목적, 구성, 검증 결과를 불렛으로 정리한다.
+- 사용자 추가 확인: 실시간 결제 시스템에서 GitHub Actions와 AWS CodeBuild·CodeDeploy를 함께 사용했다. 그림은 해당 도구의 CI/CD 관계를 표현하며, 아티팩트 저장소·세부 호출 명령·자동 롤백은 추가하지 않는다.
+- Blue와 Green은 별도 EC2 환경이며, 공통 RDS를 사용한다. 참고 그림의 RDS 복제나 Multi-AZ 구성을 본인 경험으로 옮기지 않는다.
+- draw.io의 EC2·RDS·Load Balancing·CodeBuild·CodeDeploy 아이콘을 사용한다. 기존 버전/새 버전 대신 Blue Environment, Green Environment, Payment API v1/v2로 환경을 구분한다.
+- 원본 파일과 내보내기 도구는 저장소에 보존하되, 제출 화면의 draw.io 다운로드 링크와 편집 안내는 삭제한다.
+- 하단은 기술 스택, 커뮤니티 활동, 대학과 전공으로 구성한다. 자격증 표시는 제외했다.
+
+기술 관계 참고: [GitHub Actions 워크플로](https://docs.github.com/en/actions/concepts/workflows-and-actions/workflows), [CodeDeploy와 Load Balancing](https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-elastic-load-balancing.html).

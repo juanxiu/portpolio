@@ -18,10 +18,10 @@ export const extraPrs = [
 ];
 
 export const skills = [
-  { label: 'Kubernetes · Go', evidence: 'Operator의 CRD와 컨트롤러 구현, Argo CD Agent 코드와 NetworkPolicy 수정', target: '#open-source' },
-  { label: 'Docker · CI/CD', evidence: 'Dockerfile과 Compose로 실행 환경 구성, GitHub Actions 빌드와 배포 자동화', target: '#delivery' },
-  { label: 'AWS · GCP', evidence: '수집 서비스와 백엔드의 독립 배포, EC2와 RDS 구성, 로드밸런서 전환', target: '#delivery' },
-  { label: 'Linux · Python', evidence: '가상머신과 원격 접속 환경 구성, CPU 부하 실험, 연구 실험과 메모리 측정', target: '#homelab' },
+  { label: 'Container & Kubernetes', technologies: 'Docker, Docker Compose, Kubernetes, Argo CD' },
+  { label: 'Cloud & CI/CD', technologies: 'AWS, GCP, GitHub Actions, CodeBuild, CodeDeploy' },
+  { label: 'Language & OS', technologies: 'Go, Python, Linux' },
+  { label: 'Monitoring', technologies: 'Prometheus, Sentry, n8n' },
 ];
 
 export const prUrl = number => `https://github.com/argoproj-labs/argocd-agent/pull/${number}`;

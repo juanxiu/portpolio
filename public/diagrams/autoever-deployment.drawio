@@ -1,277 +1,389 @@
 <?xml version='1.0' encoding='utf-8'?>
 <mxfile host="Electron" version="31.0.2" type="device">
-  <diagram name="AWS·GCP 서비스 배포 아키텍처" id="AWS·GCP 서비스 배포 아키텍처">
-    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1200" pageHeight="760" background="#FFFFFF">
+  <diagram name="실시간 결제 시스템 배포 아키텍처" id="실시간 결제 시스템 배포 아키텍처">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1280" pageHeight="990" background="#FFFFFF">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="2" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=none;strokeWidth=1.4;fontSize=18;dashed=0;" vertex="1" parent="1">
-          <mxGeometry x="0" y="0" width="1200" height="760" as="geometry" />
+          <mxGeometry x="0" y="0" width="1280" height="990" as="geometry" />
         </mxCell>
-        <mxCell id="3" value="AWS · GCP 서비스 배포 아키텍처" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=25;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="25" y="10" width="1150" height="40" as="geometry" />
+        <mxCell id="3" value="실시간 결제 시스템 · 배포 아키텍처" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=26;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="25" y="15" width="1220" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="4" value="GCP" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#F8FAFE;strokeColor=#4285F4;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
-          <mxGeometry x="25" y="180" width="235" height="245" as="geometry" />
+        <mxCell id="4" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=image;imageAspect=0;aspect=fixed;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0wLjIgLTEgMzc5IDMzNCI+CiA8cGF0aCBpZD0icHVkZGxlIiBmaWxsPSIjOUNEQUYxIiBkPSJtMjk2Ljk0IDI5NS40M2MwIDIwLjUzMy00Ny41NiAzNy4xNzYtMTA2LjIyIDM3LjE3Ni01OC42NyAwLTEwNi4yMy0xNi42NDMtMTA2LjIzLTM3LjE3NnM0Ny41NTgtMzcuMTggMTA2LjIzLTM3LjE4YzU4LjY2IDAgMTA2LjIyIDE2LjY1IDEwNi4yMiAzNy4xOHoiLz4KIDxnIGlkPSJzaGFkb3ctbGVncyIgZmlsbD0iIzdEQkJFNiI+CiAgPHBhdGggZD0ibTE2MS44NSAzMzEuMjJ2LTI2LjVjMC0zLjQyMi0uNjE5LTYuMjg0LTEuNjUzLTguNzAxIDYuODUzIDUuMzIyIDcuMzE2IDE4LjY5NSA3LjMxNiAxOC42OTV2MTcuMDA0YzYuMTY2LjQ4MSAxMi41MzQuNzczIDE5LjA1My44NjFsLS4xNzItMTYuOTJjLS45NDQtMjMuMTMtMjAuNzY5LTI1Ljk2MS0yMC43NjktMjUuOTYxLTcuMjQ1LTEuNjQ1LTcuMTM3IDEuOTkxLTYuNDA5IDQuMzQtNy4xMDgtMTIuMTIyLTI2LjE1OC0xMC41NTYtMjYuMTU4LTEwLjU1Ni02LjYxMSAyLjM1Ny0uNDc1IDYuNjA3LS40NzUgNi42MDcgMTAuMzg3IDMuNzc1IDExLjMzIDE1LjEwNSAxMS4zMyAxNS4xMDV2MjMuNjIyYzUuNzIuOTggMTEuNzEgMS43OSAxNy45NCAyLjR6Ii8+CiAgPHBhdGggZD0ibTI0NS40IDI4My40OHMtMTkuMDUzLTEuNTY2LTI2LjE2IDEwLjU1OWMuNzI4LTIuMzUuODM5LTUuOTg5LTYuNDA4LTQuMzQzIDAgMC0xOS44MjQgMi44MzItMjAuNzY4IDI1Ljk2MWwtLjE3NCAxNi45NDZjNi41MDktLjAyNSAxMi44NzYtLjI1NCAxOS4wNTQtLjY3MXYtMTcuMjE5cy40NjUtMTMuMzczIDcuMzE2LTE4LjY5NWMtMS4wMzQgMi40MTctMS42NTMgNS4yNzgtMS42NTMgOC43MDF2MjYuNzc1YzYuMjE0LS41NDQgMTIuMjExLTEuMjc5IDE3LjkzNy0yLjE4OHYtMjQuMTEzcy45NDQtMTEuMzMgMTEuMzMtMTUuMTA1YzAtLjAxIDYuMTMtNC4yNi0uNDgtNi42MnoiLz4KIDwvZz4KIDxwYXRoIGlkPSJjYXQiIGQ9Im0zNzguMTggMTQxLjMybC4yOC0xLjM4OWMtMzEuMTYyLTYuMjMxLTYzLjE0MS02LjI5NC04Mi40ODctNS40OSAzLjE3OC0xMS40NTEgNC4xMzQtMjQuNjI3IDQuMTM0LTM5LjMyIDAtMjEuMDczLTcuOTE3LTM3LjkzMS0yMC43Ny01MC43NTkgMi4yNDYtNy4yNSA1LjI0Ni0yMy4zNTEtMi45OTYtNDMuOTYzIDAgMC0xNC41NDEtNC42MTctNDcuNDMxIDE3LjM5Ni0xMi44ODQtMy4yMi0yNi41OTYtNC44MS00MC4zMjgtNC44MS0xNS4xMDkgMC0zMC4zNzYgMS45MjQtNDQuNjE1IDUuODMtMzMuOTQtMjMuMTU0LTQ4LjkyMy0xOC40MTEtNDguOTIzLTE4LjQxMS05Ljc4IDI0LjQ1Ny0zLjczMyA0Mi41NjYtMS44OTYgNDcuMDYzLTExLjQ5NSAxMi40MDYtMTguNTEzIDI4LjI0My0xOC41MTMgNDcuNjU5IDAgMTQuNjU4IDEuNjY5IDI3LjgwOCA1Ljc0NSAzOS4yMzctMTkuNTExLS43MS01MC4zMjMtLjQzNy04MC4zNzMgNS41NzJsLjI3NiAxLjM4OWMzMC4yMzEtNi4wNDYgNjEuMjM3LTYuMjU2IDgwLjYyOS01LjUyMi44OTggMi4zNjYgMS44OTkgNC42NjEgMy4wMjEgNi44NzktMTkuMTc3LjYxOC01MS45MjIgMy4wNjItODMuMzAzIDExLjkxNWwuMzg3IDEuMzZjMzEuNjI5LTguOTE4IDY0LjY1OC0xMS4zMDEgODMuNjQ5LTExLjg4MiAxMS40NTggMjEuMzU4IDM0LjA0OCAzNS4xNTIgNzQuMjM2IDM5LjQ4NC01LjcwNCAzLjgzMy0xMS41MjMgMTAuMzQ5LTEzLjg4MSAyMS4zNzQtNy43NzMgMy43MTgtMzIuMzc5IDEyLjc5My00Ny4xNDItMTIuNTk5IDAgMC04LjI2NC0xNS4xMDktMjQuMDgyLTE2LjI5MiAwIDAtMTUuMzQ0LS4yMzUtMS4wNTkgOS41NjIgMCAwIDEwLjI2NyA0LjgzOCAxNy4zNTEgMjMuMDE5IDAgMCA5LjI0MSAzMS4wMSA1My44MzUgMjEuMDYxdjMyLjAzMnMtLjk0MyAxMS4zMy0xMS4zMyAxNS4xMDVjMCAwLTYuMTM3IDQuMjQ5LjQ3NSA2LjYwNiAwIDAgMjguNzkyIDIuMzYxIDI4Ljc5Mi0yMS4yMzh2LTM0LjkyOXMtMS4xNDItMTMuODUyIDUuNjYzLTE4LjY2N3Y1Ny4zNzFzLS40NyAxMy42ODgtNy41NTEgMTguODgxYzAgMC00LjcyMyA4LjQ5NCA1LjY2MyA2LjEzNyAwIDAgMTkuODI0LTIuODMyIDIwLjc2OS0yNS45NjFsLjQ0OS01OC4wNmg0Ljc2NWwuNDUzIDU4LjA2Yy45NDMgMjMuMTI5IDIwLjc2OCAyNS45NjEgMjAuNzY4IDI1Ljk2MSAxMC4zODMgMi4zNTcgNS42NjMtNi4xMzcgNS42NjMtNi4xMzctNy4wOC01LjE5My03LjU1MS0xOC44ODEtNy41NTEtMTguODgxdi01Ni44NzZjNi44MDEgNS4yOTYgNS42NjMgMTguMTcxIDUuNjYzIDE4LjE3MXYzNC45MjljMCAyMy42IDI4Ljc5MyAyMS4yMzggMjguNzkzIDIxLjIzOCA2LjYwNi0yLjM1Ny40NzQtNi42MDYuNDc0LTYuNjA2LTEwLjM4Ni0zLjc3NS0xMS4zMy0xNS4xMDUtMTEuMzMtMTUuMTA1di00NS43ODZjMC0xNy44NTQtNy41MTgtMjcuMzA5LTE0Ljg3LTMyLjMgNDIuODU5LTQuMjUgNjMuNDI2LTE4LjA4OSA3Mi45MDMtMzkuNTkxIDE4Ljc3My41MTYgNTIuNTU3IDIuODAzIDg0Ljg3MyAxMS45MTlsLjM4NC0xLjM2Yy0zMi4xMzEtOS4wNjMtNjUuNjkyLTExLjQwOC04NC42NTUtMTEuOTYuODk4LTIuMTcyIDEuNjgyLTQuNDMxIDIuMzc4LTYuNzU1IDE5LjI1LS44MCA1MS4zOC0uNzkgODIuNjYgNS40NnoiLz4KIDxwYXRoIGlkPSJmYWNlIiBmaWxsPSIjRjRDQkIyIiBkPSJtMjU4LjE5IDk0LjEzMmM5LjIzMSA4LjM2MyAxNC42MzEgMTguNDYyIDE0LjYzMSAyOS4zNDMgMCA1MC44MDQtMzcuODcyIDUyLjE4MS04NC41ODUgNTIuMTgxLTQ2LjcyMSAwLTg0LjU4OS03LjAzNS04NC41ODktNTIuMTgxIDAtMTAuODA5IDUuMzI0LTIwLjg0NSAxNC40NDEtMjkuMTc0IDE1LjIwOC0xMy44ODEgNDAuOTQ2LTYuNTMxIDcwLjE0Ny02LjUzMSAyOS4wNy0uMDA0IDU0LjcyLTcuNDI5IDY5Ljk1IDYuMzU3eiIvPgogPHBhdGggaWQ9ImV5ZXMiIGZpbGw9IiNGRkYiIGQ9Im0xNjAuMSAxMjYuMDYgYzAgMTMuOTk0LTcuODggMjUuMzM2LTE3LjYgMjUuMzM2LTkuNzIgMC0xNy42LTExLjM0Mi0xNy42LTI1LjMzNiAwLTEzLjk5MiA3Ljg4LTI1LjMzIDE3LjYtMjUuMzMgOS43Mi4wMSAxNy42IDExLjM0IDE3LjYgMjUuMzN6IG05NC40MyAwIGMwIDEzLjk5NC03Ljg4IDI1LjMzNi0xNy42IDI1LjMzNi05LjcyIDAtMTcuNi0xMS4zNDItMTcuNi0yNS4zMzYgMC0xMy45OTIgNy44OC0yNS4zMyAxNy42LTI1LjMzIDkuNzIuMDEgMTcuNiAxMS4zNCAxNy42IDI1LjMzeiIvPgogPGcgZmlsbD0iI0FENUM1MSI+CiAgIDxwYXRoIGlkPSJwdXBpbHMiIGQ9Im0xNTQuNDYgMTI2LjM4IGMwIDkuMzI4LTUuMjYgMTYuODg3LTExLjczNCAxNi44ODdzLTExLjczMy03LjU1OS0xMS43MzMtMTYuODg3YzAtOS4zMzEgNS4yNTUtMTYuODk0IDExLjczMy0xNi44OTQgNi40NyAwIDExLjczIDcuNTYgMTEuNzMgMTYuODl6IG05NC40MiAwIGMwIDkuMzI4LTUuMjYgMTYuODg3LTExLjczNCAxNi44ODdzLTExLjczMy03LjU1OS0xMS43MzMtMTYuODg3YzAtOS4zMzEgNS4yNTUtMTYuODk0IDExLjczMy0xNi44OTQgNi40NyAwIDExLjczIDcuNTYgMTEuNzMgMTYuODl6Ii8+CiAgIDxjaXJjbGUgaWQ9Im5vc2UiIGN4PSIxODguNSIgY3k9IjE0OC41NiIgcj0iNC40MDEiLz4KICAgPHBhdGggaWQ9Im1vdXRoIiBkPSJtMTc4LjIzIDE1OS42OWMtLjI2LS43MzguMTI4LTEuNTQ1Ljg2MS0xLjgwNS43MzctLjI2IDEuNTQ2LjEyOCAxLjgwNS44NjEgMS4xMzQgMy4xOTggNC4xNjcgNS4zNDYgNy41NTEgNS4zNDZzNi40MTctMi4xNDcgNy41NTEtNS4zNDZjLjI2LS43MzggMS4wNjctMS4xMjEgMS44MDUtLjg2MXMxLjEyMSAxLjA2Ny44NjIgMS44MDVjLTEuNTI5IDQuMzI0LTUuNjM5IDcuMjI5LTEwLjIxOCA3LjIyOXMtOC42OC0yLjg5LTEwLjIxLTcuMjJ6Ii8+CiA8L2c+CiA8cGF0aCBpZD0ib2N0byIgZmlsbD0iI0MzRTREOCIgZD0ibTgwLjY0MSAxNzkuODIgYzAgMS4xNzQtMS4zNzYgMi4xMjItMy4wNyAyLjEyMi0xLjY5MyAwLTMuMDctLjk0OC0zLjA3LTIuMTIyIDAtMS4xNzUgMS4zNzctMi4xMjcgMy4wNy0yLjEyNyAxLjY5NCAwIDMuMDcuOTUgMy4wNyAyLjEzeiBtOC41IDQuNzIgYzAgMS4xNzQtMS4zNzYgMi4xMjItMy4wNyAyLjEyMi0xLjY5MyAwLTMuMDctLjk0OC0zLjA3LTIuMTIyIDAtMS4xNzUgMS4zNzctMi4xMjcgMy4wNy0yLjEyNyAxLjY5NCAwIDMuMDcuOTUgMy4wNyAyLjEzeiBtNS4xOTMgNi4xNCBjMCAxLjE3NC0xLjM3NiAyLjEyMi0zLjA3IDIuMTIyLTEuNjkzIDAtMy4wNy0uOTQ4LTMuMDctMi4xMjIgMC0xLjE3NSAxLjM3Ny0yLjEyNyAzLjA3LTIuMTI3IDEuNjk0IDAgMy4wNy45NSAzLjA3IDIuMTN6IG00LjcyIDcuMDggYzAgMS4xNzQtMS4zNzYgMi4xMjItMy4wNyAyLjEyMi0xLjY5MyAwLTMuMDctLjk0OC0zLjA3LTIuMTIyIDAtMS4xNzUgMS4zNzctMi4xMjcgMy4wNy0yLjEyNyAxLjY5NCAwIDMuMDcuOTUgMy4wNyAyLjEzeiBtNS4xODggNi42MSBjMCAxLjE3NC0xLjM3NiAyLjEyMi0zLjA3IDIuMTIyLTEuNjkzIDAtMy4wNy0uOTQ4LTMuMDctMi4xMjIgMC0xLjE3NSAxLjM3Ny0yLjEyNyAzLjA3LTIuMTI3IDEuNjk0IDAgMy4wNy45NSAzLjA3IDIuMTN6IG03LjA5IDUuNjYgYzAgMS4xNzQtMS4zNzYgMi4xMjItMy4wNyAyLjEyMi0xLjY5MyAwLTMuMDctLjk0OC0zLjA3LTIuMTIyIDAtMS4xNzUgMS4zNzctMi4xMjcgMy4wNy0yLjEyNyAxLjY5NCAwIDMuMDcuOTUgMy4wNyAyLjEzeiBtOS45MSAzLjc4IGMwIDEuMTc0LTEuMzc2IDIuMTIyLTMuMDcgMi4xMjItMS42OTMgMC0zLjA3LS45NDgtMy4wNy0yLjEyMiAwLTEuMTc1IDEuMzc3LTIuMTI3IDMuMDctMi4xMjcgMS42OTQgMCAzLjA3Ljk1IDMuMDcgMi4xM3ogbTkuODcgMCBjMCAxLjE3NC0xLjM3NiAyLjEyMi0zLjA3IDIuMTIyLTEuNjkzIDAtMy4wNy0uOTQ4LTMuMDctMi4xMjIgMC0xLjE3NSAxLjM3Ny0yLjEyNyAzLjA3LTIuMTI3IDEuNjk0IDAgMy4wNy45NSAzLjA3IDIuMTN6IG0xMC4wMSAtMS42NCBjMCAxLjE3NC0xLjM3NiAyLjEyMi0zLjA3IDIuMTIyLTEuNjkzIDAtMy4wNy0uOTQ4LTMuMDctMi4xMjIgMC0xLjE3NSAxLjM3Ny0yLjEyNyAzLjA3LTIuMTI3IDEuNjk0IDAgMy4wNy45NSAzLjA3IDIuMTN6Ii8+CiA8cGF0aCBpZD0iZHJvcCIgZmlsbD0iIzlDREFGMSIgZD0ibTY5LjM2OSAxODYuMTJsLTMuMDY2IDEwLjY4M3MtLjggMy44NjEgMi44NCA0LjU0NmMzLjgtLjA3NCAzLjQ4Ni0zLjYyNyAzLjIyMy00Ljc4MXoiLz4KPC9zdmc+;" vertex="1" parent="1">
+          <mxGeometry x="100" y="95" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="5" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=cloud;fillColor=#FFFFFF;strokeColor=#4285F4;strokeWidth=1.6;" vertex="1" parent="1">
-          <mxGeometry x="103" y="245" width="70" height="48" as="geometry" />
+        <mxCell id="5" value="GitHub Actions" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="52" y="163" width="160" height="28" as="geometry" />
         </mxCell>
-        <mxCell id="6" value="데이터 수집 서비스&#10;컨테이너 실행 환경" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=19;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="45" y="310" width="195" height="80" as="geometry" />
+        <mxCell id="6" value="AWS CodeBuild" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="167" width="214" height="29" as="geometry" />
         </mxCell>
-        <mxCell id="7" value="AWS Cloud" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=none;strokeColor=#232F3E;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;spacingLeft=42;" vertex="1" parent="1">
-          <mxGeometry x="310" y="65" width="865" height="630" as="geometry" />
+        <mxCell id="7" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.codebuild;fillColor=#C925D1;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="555" y="95" width="64" height="64" as="geometry" />
         </mxCell>
-        <mxCell id="8" value="VPC" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=none;strokeColor=#8C4FFF;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc2;spacingLeft=42;" vertex="1" parent="1">
-          <mxGeometry x="335" y="120" width="815" height="550" as="geometry" />
+        <mxCell id="8" value="AWS CodeDeploy" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="935" y="167" width="214" height="29" as="geometry" />
         </mxCell>
-        <mxCell id="9" value="Public subnet" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#F9FBF5;strokeColor=#7AA116;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;spacingLeft=42;" vertex="1" parent="1">
-          <mxGeometry x="355" y="180" width="770" height="280" as="geometry" />
+        <mxCell id="9" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.codedeploy;fillColor=#C925D1;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="95" width="64" height="64" as="geometry" />
         </mxCell>
-        <mxCell id="10" value="Private subnet" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#F2FAFA;strokeColor=#00A4A6;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;spacingLeft=42;" vertex="1" parent="1">
-          <mxGeometry x="355" y="530" width="770" height="115" as="geometry" />
-        </mxCell>
-        <mxCell id="11" value="Load Balancer" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="322" y="350" width="214" height="29" as="geometry" />
-        </mxCell>
-        <mxCell id="12" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fillColor=#8C4FFF;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="397" y="278" width="64" height="64" as="geometry" />
-        </mxCell>
-        <mxCell id="13" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=none;strokeColor=#AAB7B8;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
-          <mxGeometry x="545" y="217" width="555" height="227" as="geometry" />
-        </mxCell>
-        <mxCell id="14" value="백엔드 서비스" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="735" y="183" width="345" height="29" as="geometry" />
-        </mxCell>
-        <mxCell id="15" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="540" y="337" width="214" height="29" as="geometry" />
-        </mxCell>
-        <mxCell id="16" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="615" y="265" width="64" height="64" as="geometry" />
-        </mxCell>
-        <mxCell id="17" value="Blue EC2 · 기존 버전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=17;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="545" y="238" width="225" height="25" as="geometry" />
-        </mxCell>
-        <mxCell id="18" value="백엔드 컨테이너" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#D86613;strokeWidth=1.4;fontSize=17;dashed=0;" vertex="1" parent="1">
-          <mxGeometry x="565" y="373" width="205" height="45" as="geometry" />
-        </mxCell>
-        <mxCell id="19" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="820" y="337" width="214" height="29" as="geometry" />
-        </mxCell>
-        <mxCell id="20" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="895" y="265" width="64" height="64" as="geometry" />
-        </mxCell>
-        <mxCell id="21" value="Green EC2 · 새 버전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=17;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="825" y="238" width="225" height="25" as="geometry" />
-        </mxCell>
-        <mxCell id="22" value="백엔드 컨테이너" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#D86613;strokeWidth=1.4;fontSize=17;dashed=0;" vertex="1" parent="1">
-          <mxGeometry x="845" y="373" width="205" height="45" as="geometry" />
-        </mxCell>
-        <mxCell id="23" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#147EBA;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
+        <mxCell id="10" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="461" y="296" as="sourcePoint" />
-            <mxPoint x="605" y="296" as="targetPoint" />
+            <mxPoint x="160" y="127" as="sourcePoint" />
+            <mxPoint x="545" y="127" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="24" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#248814;strokeWidth=1.7;dashed=1;" edge="1" parent="1">
+        <mxCell id="11" value="워크플로 실행 · 애플리케이션 빌드" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#545B64;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="184" y="84" width="344" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="461" y="315" as="sourcePoint" />
-            <mxPoint x="885" y="296" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="505" y="315" />
-              <mxPoint x="505" y="352" />
-              <mxPoint x="829" y="352" />
-              <mxPoint x="829" y="296" />
-            </Array>
+            <mxPoint x="619" y="127" as="sourcePoint" />
+            <mxPoint x="1000" y="127" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="25" value="대상 그룹 전환" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="365" y="399" width="160" height="45" as="geometry" />
+        <mxCell id="13" value="빌드 결과 배포" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#545B64;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="665" y="85" width="280" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="26" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=1;" edge="1" parent="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="240" y="390" as="sourcePoint" />
-            <mxPoint x="800" y="444" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="280" y="390" />
-              <mxPoint x="280" y="482" />
-              <mxPoint x="800" y="482" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="14" value="CI/CD 제어 흐름" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=17;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="213" width="1170" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="27" value="gRPC · 서비스 간 논리적 통신" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#545B64;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="365" y="489" width="310" height="29" as="geometry" />
+        <mxCell id="15" value="AWS Cloud" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=none;strokeColor=#232F3E;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;spacingLeft=42;" vertex="1" parent="1">
+          <mxGeometry x="280" y="275" width="970" height="655" as="geometry" />
         </mxCell>
-        <mxCell id="28" value="Amazon RDS" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="880" y="603" width="205" height="29" as="geometry" />
+        <mxCell id="16" value="VPC" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=none;strokeColor=#8C4FFF;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc2;spacingLeft=42;" vertex="1" parent="1">
+          <mxGeometry x="305" y="327" width="920" height="575" as="geometry" />
         </mxCell>
-        <mxCell id="29" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.rds;fillColor=#C925D1;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="955" y="540" width="55" height="55" as="geometry" />
+        <mxCell id="17" value="Public subnet" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#F9FBF5;strokeColor=#7AA116;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;spacingLeft=42;" vertex="1" parent="1">
+          <mxGeometry x="330" y="380" width="870" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="Private subnet · Shared database" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#F2FAFA;strokeColor=#00A4A6;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;spacingLeft=42;" vertex="1" parent="1">
+          <mxGeometry x="330" y="765" width="870" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="Blue Environment" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#EFF5FC;strokeColor=#2563A6;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="625" y="422" width="245" height="236" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="Green Environment" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#EEF8F1;strokeColor=#24834A;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="925" y="422" width="245" height="236" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="548" width="212" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="715" y="478" width="62" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="Payment API v1" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#2563A6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="582" width="162" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="940" y="548" width="212" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="478" width="62" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="Payment API v2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#24834A;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="965" y="582" width="162" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="Load Balancer" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="318" y="576" width="214" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fillColor=#8C4FFF;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="393" y="504" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="Client&#10;서비스 요청" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=20;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="44" y="490" width="180" height="48" as="geometry" />
         </mxCell>
         <mxCell id="30" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="684" y="418" as="sourcePoint" />
-            <mxPoint x="945" y="567" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="684" y="567" />
-            </Array>
+            <mxPoint x="220" y="536" as="sourcePoint" />
+            <mxPoint x="382" y="536" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="31" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
+        <mxCell id="31" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#2563A6;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="967" y="418" as="sourcePoint" />
-            <mxPoint x="1021" y="567" as="targetPoint" />
+            <mxPoint x="457" y="536" as="sourcePoint" />
+            <mxPoint x="705" y="536" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="32" value="전환 전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#2563A6;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="493" width="90" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="33" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#24834A;strokeWidth=1.7;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="457" y="550" as="sourcePoint" />
+            <mxPoint x="1005" y="536" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1039" y="418" />
-              <mxPoint x="1039" y="567" />
+              <mxPoint x="558" y="550" />
+              <mxPoint x="558" y="678" />
+              <mxPoint x="898" y="678" />
+              <mxPoint x="898" y="536" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="32" value="애플리케이션 데이터 저장" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=17;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="410" y="590" width="255" height="32" as="geometry" />
+        <mxCell id="34" value="대상 그룹 및&#10;라우팅 전환" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=17;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="354" y="608" width="190" height="48" as="geometry" />
         </mxCell>
-        <mxCell id="33" value="수집 서비스와 백엔드의 독립 배포  /  EC2별 기존 버전과 새 버전 운영" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="30" y="708" width="1140" height="35" as="geometry" />
+        <mxCell id="35" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#B75E08;strokeWidth=1.7;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1042" y="190" as="sourcePoint" />
+            <mxPoint x="1088" y="510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1042" y="244" />
+              <mxPoint x="1188" y="244" />
+              <mxPoint x="1188" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="36" value="Green 환경 배포" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=17;fontColor=#B75E08;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="860" y="291" width="323" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="642" y="860" width="208" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="38" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.rds;fillColor=#C925D1;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="717" y="794" width="58" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="39" value="Amazon RDS · 공통 DB" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=19;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="803" y="807" width="305" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="40" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="747" y="658" as="sourcePoint" />
+            <mxPoint x="747" y="785" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="41" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1050" y="658" as="sourcePoint" />
+            <mxPoint x="770" y="785" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1050" y="748" />
+              <mxPoint x="770" y="748" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="42" value="GCP" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#F8FAFE;strokeColor=#4285F4;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="650" width="205" height="242" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=cloud;fillColor=#FFFFFF;strokeColor=#4285F4;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="97" y="715" width="68" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="44" value="데이터 수집 서비스&#10;독립 배포" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="42" y="790" width="182" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="45" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#697788;strokeWidth=1.7;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="235" y="738" as="sourcePoint" />
+            <mxPoint x="625" y="637" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="270" y="738" />
+              <mxPoint x="270" y="720" />
+              <mxPoint x="590" y="720" />
+              <mxPoint x="590" y="637" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46" value="gRPC 서비스 연계" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=17;fontColor=#697788;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="721" width="255" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="47" value="실선: 서비스 요청 및 데이터 접근     점선: 배포 제어 · 전환 후 경로 · 서비스 간 논리적 연결" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="946" width="1220" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="CI/CD 및 블루그린 배포" id="CI/CD 및 블루그린 배포">
-    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1200" pageHeight="760" background="#FFFFFF">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1280" pageHeight="920" background="#FFFFFF">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="2" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=none;strokeWidth=1.4;fontSize=18;dashed=0;" vertex="1" parent="1">
-          <mxGeometry x="0" y="0" width="1200" height="760" as="geometry" />
+          <mxGeometry x="0" y="0" width="1280" height="920" as="geometry" />
         </mxCell>
-        <mxCell id="3" value="CI/CD 파이프라인 및 블루그린 배포" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=25;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="25" y="10" width="1150" height="40" as="geometry" />
+        <mxCell id="3" value="CI/CD 파이프라인 · 블루그린 배포" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=26;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="25" y="15" width="1220" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="4" value="GitHub&#10;코드 변경" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#545B64;strokeWidth=1.4;fontSize=21;dashed=0;" vertex="1" parent="1">
-          <mxGeometry x="40" y="95" width="230" height="85" as="geometry" />
+        <mxCell id="4" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=image;imageAspect=0;aspect=fixed;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0wLjIgLTEgMzc5IDMzNCI+CiA8cGF0aCBpZD0icHVkZGxlIiBmaWxsPSIjOUNEQUYxIiBkPSJtMjk2Ljk0IDI5NS40M2MwIDIwLjUzMy00Ny41NiAzNy4xNzYtMTA2LjIyIDM3LjE3Ni01OC42NyAwLTEwNi4yMy0xNi42NDMtMTA2LjIzLTM3LjE3NnM0Ny41NTgtMzcuMTggMTA2LjIzLTM3LjE4YzU4LjY2IDAgMTA2LjIyIDE2LjY1IDEwNi4yMiAzNy4xOHoiLz4KIDxnIGlkPSJzaGFkb3ctbGVncyIgZmlsbD0iIzdEQkJFNiI+CiAgPHBhdGggZD0ibTE2MS44NSAzMzEuMjJ2LTI2LjVjMC0zLjQyMi0uNjE5LTYuMjg0LTEuNjUzLTguNzAxIDYuODUzIDUuMzIyIDcuMzE2IDE4LjY5NSA3LjMxNiAxOC42OTV2MTcuMDA0YzYuMTY2LjQ4MSAxMi41MzQuNzczIDE5LjA1My44NjFsLS4xNzItMTYuOTJjLS45NDQtMjMuMTMtMjAuNzY5LTI1Ljk2MS0yMC43NjktMjUuOTYxLTcuMjQ1LTEuNjQ1LTcuMTM3IDEuOTkxLTYuNDA5IDQuMzQtNy4xMDgtMTIuMTIyLTI2LjE1OC0xMC41NTYtMjYuMTU4LTEwLjU1Ni02LjYxMSAyLjM1Ny0uNDc1IDYuNjA3LS40NzUgNi42MDcgMTAuMzg3IDMuNzc1IDExLjMzIDE1LjEwNSAxMS4zMyAxNS4xMDV2MjMuNjIyYzUuNzIuOTggMTEuNzEgMS43OSAxNy45NCAyLjR6Ii8+CiAgPHBhdGggZD0ibTI0NS40IDI4My40OHMtMTkuMDUzLTEuNTY2LTI2LjE2IDEwLjU1OWMuNzI4LTIuMzUuODM5LTUuOTg5LTYuNDA4LTQuMzQzIDAgMC0xOS44MjQgMi44MzItMjAuNzY4IDI1Ljk2MWwtLjE3NCAxNi45NDZjNi41MDktLjAyNSAxMi44NzYtLjI1NCAxOS4wNTQtLjY3MXYtMTcuMjE5cy40NjUtMTMuMzczIDcuMzE2LTE4LjY5NWMtMS4wMzQgMi40MTctMS42NTMgNS4yNzgtMS42NTMgOC43MDF2MjYuNzc1YzYuMjE0LS41NDQgMTIuMjExLTEuMjc5IDE3LjkzNy0yLjE4OHYtMjQuMTEzcy45NDQtMTEuMzMgMTEuMzMtMTUuMTA1YzAtLjAxIDYuMTMtNC4yNi0uNDgtNi42MnoiLz4KIDwvZz4KIDxwYXRoIGlkPSJjYXQiIGQ9Im0zNzguMTggMTQxLjMybC4yOC0xLjM4OWMtMzEuMTYyLTYuMjMxLTYzLjE0MS02LjI5NC04Mi40ODctNS40OSAzLjE3OC0xMS40NTEgNC4xMzQtMjQuNjI3IDQuMTM0LTM5LjMyIDAtMjEuMDczLTcuOTE3LTM3LjkzMS0yMC43Ny01MC43NTkgMi4yNDYtNy4yNSA1LjI0Ni0yMy4zNTEtMi45OTYtNDMuOTYzIDAgMC0xNC41NDEtNC42MTctNDcuNDMxIDE3LjM5Ni0xMi44ODQtMy4yMi0yNi41OTYtNC44MS00MC4zMjgtNC44MS0xNS4xMDkgMC0zMC4zNzYgMS45MjQtNDQuNjE1IDUuODMtMzMuOTQtMjMuMTU0LTQ4LjkyMy0xOC40MTEtNDguOTIzLTE4LjQxMS05Ljc4IDI0LjQ1Ny0zLjczMyA0Mi41NjYtMS44OTYgNDcuMDYzLTExLjQ5NSAxMi40MDYtMTguNTEzIDI4LjI0My0xOC41MTMgNDcuNjU5IDAgMTQuNjU4IDEuNjY5IDI3LjgwOCA1Ljc0NSAzOS4yMzctMTkuNTExLS43MS01MC4zMjMtLjQzNy04MC4zNzMgNS41NzJsLjI3NiAxLjM4OWMzMC4yMzEtNi4wNDYgNjEuMjM3LTYuMjU2IDgwLjYyOS01LjUyMi44OTggMi4zNjYgMS44OTkgNC42NjEgMy4wMjEgNi44NzktMTkuMTc3LjYxOC01MS45MjIgMy4wNjItODMuMzAzIDExLjkxNWwuMzg3IDEuMzZjMzEuNjI5LTguOTE4IDY0LjY1OC0xMS4zMDEgODMuNjQ5LTExLjg4MiAxMS40NTggMjEuMzU4IDM0LjA0OCAzNS4xNTIgNzQuMjM2IDM5LjQ4NC01LjcwNCAzLjgzMy0xMS41MjMgMTAuMzQ5LTEzLjg4MSAyMS4zNzQtNy43NzMgMy43MTgtMzIuMzc5IDEyLjc5My00Ny4xNDItMTIuNTk5IDAgMC04LjI2NC0xNS4xMDktMjQuMDgyLTE2LjI5MiAwIDAtMTUuMzQ0LS4yMzUtMS4wNTkgOS41NjIgMCAwIDEwLjI2NyA0LjgzOCAxNy4zNTEgMjMuMDE5IDAgMCA5LjI0MSAzMS4wMSA1My44MzUgMjEuMDYxdjMyLjAzMnMtLjk0MyAxMS4zMy0xMS4zMyAxNS4xMDVjMCAwLTYuMTM3IDQuMjQ5LjQ3NSA2LjYwNiAwIDAgMjguNzkyIDIuMzYxIDI4Ljc5Mi0yMS4yMzh2LTM0LjkyOXMtMS4xNDItMTMuODUyIDUuNjYzLTE4LjY2N3Y1Ny4zNzFzLS40NyAxMy42ODgtNy41NTEgMTguODgxYzAgMC00LjcyMyA4LjQ5NCA1LjY2MyA2LjEzNyAwIDAgMTkuODI0LTIuODMyIDIwLjc2OS0yNS45NjFsLjQ0OS01OC4wNmg0Ljc2NWwuNDUzIDU4LjA2Yy45NDMgMjMuMTI5IDIwLjc2OCAyNS45NjEgMjAuNzY4IDI1Ljk2MSAxMC4zODMgMi4zNTcgNS42NjMtNi4xMzcgNS42NjMtNi4xMzctNy4wOC01LjE5My03LjU1MS0xOC44ODEtNy41NTEtMTguODgxdi01Ni44NzZjNi44MDEgNS4yOTYgNS42NjMgMTguMTcxIDUuNjYzIDE4LjE3MXYzNC45MjljMCAyMy42IDI4Ljc5MyAyMS4yMzggMjguNzkzIDIxLjIzOCA2LjYwNi0yLjM1Ny40NzQtNi42MDYuNDc0LTYuNjA2LTEwLjM4Ni0zLjc3NS0xMS4zMy0xNS4xMDUtMTEuMzMtMTUuMTA1di00NS43ODZjMC0xNy44NTQtNy41MTgtMjcuMzA5LTE0Ljg3LTMyLjMgNDIuODU5LTQuMjUgNjMuNDI2LTE4LjA4OSA3Mi45MDMtMzkuNTkxIDE4Ljc3My41MTYgNTIuNTU3IDIuODAzIDg0Ljg3MyAxMS45MTlsLjM4NC0xLjM2Yy0zMi4xMzEtOS4wNjMtNjUuNjkyLTExLjQwOC04NC42NTUtMTEuOTYuODk4LTIuMTcyIDEuNjgyLTQuNDMxIDIuMzc4LTYuNzU1IDE5LjI1LS44MCA1MS4zOC0uNzkgODIuNjYgNS40NnoiLz4KIDxwYXRoIGlkPSJmYWNlIiBmaWxsPSIjRjRDQkIyIiBkPSJtMjU4LjE5IDk0LjEzMmM5LjIzMSA4LjM2MyAxNC42MzEgMTguNDYyIDE0LjYzMSAyOS4zNDMgMCA1MC44MDQtMzcuODcyIDUyLjE4MS04NC41ODUgNTIuMTgxLTQ2LjcyMSAwLTg0LjU4OS03LjAzNS04NC41ODktNTIuMTgxIDAtMTAuODA5IDUuMzI0LTIwLjg0NSAxNC40NDEtMjkuMTc0IDE1LjIwOC0xMy44ODEgNDAuOTQ2LTYuNTMxIDcwLjE0Ny02LjUzMSAyOS4wNy0uMDA0IDU0LjcyLTcuNDI5IDY5Ljk1IDYuMzU3eiIvPgogPHBhdGggaWQ9ImV5ZXMiIGZpbGw9IiNGRkYiIGQ9Im0xNjAuMSAxMjYuMDYgYzAgMTMuOTk0LTcuODggMjUuMzM2LTE3LjYgMjUuMzM2LTkuNzIgMC0xNy42LTExLjM0Mi0xNy42LTI1LjMzNiAwLTEzLjk5MiA3Ljg4LTI1LjMzIDE3LjYtMjUuMzMgOS43Mi4wMSAxNy42IDExLjM0IDE3LjYgMjUuMzN6IG05NC40MyAwIGMwIDEzLjk5NC03Ljg4IDI1LjMzNi0xNy42IDI1LjMzNi05LjcyIDAtMTcuNi0xMS4zNDItMTcuNi0yNS4zMzYgMC0xMy45OTIgNy44OC0yNS4zMyAxNy42LTI1LjMzIDkuNzIuMDEgMTcuNiAxMS4zNCAxNy42IDI1LjMzeiIvPgogPGcgZmlsbD0iI0FENUM1MSI+CiAgIDxwYXRoIGlkPSJwdXBpbHMiIGQ9Im0xNTQuNDYgMTI2LjM4IGMwIDkuMzI4LTUuMjYgMTYuODg3LTExLjczNCAxNi44ODdzLTExLjczMy03LjU1OS0xMS43MzMtMTYuODg3YzAtOS4zMzEgNS4yNTUtMTYuODk0IDExLjczMy0xNi44OTQgNi40NyAwIDExLjczIDcuNTYgMTEuNzMgMTYuODl6IG05NC40MiAwIGMwIDkuMzI4LTUuMjYgMTYuODg3LTExLjczNCAxNi44ODdzLTExLjczMy03LjU1OS0xMS43MzMtMTYuODg3YzAtOS4zMzEgNS4yNTUtMTYuODk0IDExLjczMy0xNi44OTQgNi40NyAwIDExLjczIDcuNTYgMTEuNzMgMTYuODl6Ii8+CiAgIDxjaXJjbGUgaWQ9Im5vc2UiIGN4PSIxODguNSIgY3k9IjE0OC41NiIgcj0iNC40MDEiLz4KICAgPHBhdGggaWQ9Im1vdXRoIiBkPSJtMTc4LjIzIDE1OS42OWMtLjI2LS43MzguMTI4LTEuNTQ1Ljg2MS0xLjgwNS43MzctLjI2IDEuNTQ2LjEyOCAxLjgwNS44NjEgMS4xMzQgMy4xOTggNC4xNjcgNS4zNDYgNy41NTEgNS4zNDZzNi40MTctMi4xNDcgNy41NTEtNS4zNDZjLjI2LS43MzggMS4wNjctMS4xMjEgMS44MDUtLjg2MXMxLjEyMSAxLjA2Ny44NjIgMS44MDVjLTEuNTI5IDQuMzI0LTUuNjM5IDcuMjI5LTEwLjIxOCA3LjIyOXMtOC42OC0yLjg5LTEwLjIxLTcuMjJ6Ii8+CiA8L2c+CiA8cGF0aCBpZD0ib2N0byIgZmlsbD0iI0MzRTREOCIgZD0ibTgwLjY0MSAxNzkuODIgYzAgMS4xNzQtMS4zNzYgMi4xMjItMy4wNyAyLjEyMi0xLjY5MyAwLTMuMDctLjk0OC0zLjA3LTIuMTIyIDAtMS4xNzUgMS4zNzctMi4xMjcgMy4wNy0yLjEyNyAxLjY5NCAwIDMuMDcuOTUgMy4wNyAyLjEzeiBtOC41IDQuNzIgYzAgMS4xNzQtMS4zNzYgMi4xMjItMy4wNyAyLjEyMi0xLjY5MyAwLTMuMDctLjk0OC0zLjA3LTIuMTIyIDAtMS4xNzUgMS4zNzctMi4xMjcgMy4wNy0yLjEyNyAxLjY5NCAwIDMuMDcuOTUgMy4wNyAyLjEzeiBtNS4xOTMgNi4xNCBjMCAxLjE3NC0xLjM3NiAyLjEyMi0zLjA3IDIuMTIyLTEuNjkzIDAtMy4wNy0uOTQ4LTMuMDctMi4xMjIgMC0xLjE3NSAxLjM3Ny0yLjEyNyAzLjA3LTIuMTI3IDEuNjk0IDAgMy4wNy45NSAzLjA3IDIuMTN6IG00LjcyIDcuMDggYzAgMS4xNzQtMS4zNzYgMi4xMjItMy4wNyAyLjEyMi0xLjY5MyAwLTMuMDctLjk0OC0zLjA3LTIuMTIyIDAtMS4xNzUgMS4zNzctMi4xMjcgMy4wNy0yLjEyNyAxLjY5NCAwIDMuMDcuOTUgMy4wNyAyLjEzeiBtNS4xODggNi42MSBjMCAxLjE3NC0xLjM3NiAyLjEyMi0zLjA3IDIuMTIyLTEuNjkzIDAtMy4wNy0uOTQ4LTMuMDctMi4xMjIgMC0xLjE3NSAxLjM3Ny0yLjEyNyAzLjA3LTIuMTI3IDEuNjk0IDAgMy4wNy45NSAzLjA3IDIuMTN6IG03LjA5IDUuNjYgYzAgMS4xNzQtMS4zNzYgMi4xMjItMy4wNyAyLjEyMi0xLjY5MyAwLTMuMDctLjk0OC0zLjA3LTIuMTIyIDAtMS4xNzUgMS4zNzctMi4xMjcgMy4wNy0yLjEyNyAxLjY5NCAwIDMuMDcuOTUgMy4wNyAyLjEzeiBtOS45MSAzLjc4IGMwIDEuMTc0LTEuMzc2IDIuMTIyLTMuMDcgMi4xMjItMS42OTMgMC0zLjA3LS45NDgtMy4wNy0yLjEyMiAwLTEuMTc1IDEuMzc3LTIuMTI3IDMuMDctMi4xMjcgMS42OTQgMCAzLjA3Ljk1IDMuMDcgMi4xM3ogbTkuODcgMCBjMCAxLjE3NC0xLjM3NiAyLjEyMi0zLjA3IDIuMTIyLTEuNjkzIDAtMy4wNy0uOTQ4LTMuMDctMi4xMjIgMC0xLjE3NSAxLjM3Ny0yLjEyNyAzLjA3LTIuMTI3IDEuNjk0IDAgMy4wNy45NSAzLjA3IDIuMTN6IG0xMC4wMSAtMS42NCBjMCAxLjE3NC0xLjM3NiAyLjEyMi0zLjA3IDIuMTIyLTEuNjkzIDAtMy4wNy0uOTQ4LTMuMDctMi4xMjIgMC0xLjE3NSAxLjM3Ny0yLjEyNyAzLjA3LTIuMTI3IDEuNjk0IDAgMy4wNy45NSAzLjA3IDIuMTN6Ii8+CiA8cGF0aCBpZD0iZHJvcCIgZmlsbD0iIzlDREFGMSIgZD0ibTY5LjM2OSAxODYuMTJsLTMuMDY2IDEwLjY4M3MtLjggMy44NjEgMi44NCA0LjU0NmMzLjgtLjA3NCAzLjQ4Ni0zLjYyNyAzLjIyMy00Ljc4MXoiLz4KPC9zdmc+;" vertex="1" parent="1">
+          <mxGeometry x="115" y="95" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="5" value="GitHub Actions&#10;애플리케이션 빌드" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#545B64;strokeWidth=1.4;fontSize=21;dashed=0;" vertex="1" parent="1">
-          <mxGeometry x="470" y="95" width="250" height="85" as="geometry" />
+        <mxCell id="5" value="GitHub Actions" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="67" y="163" width="160" height="28" as="geometry" />
         </mxCell>
-        <mxCell id="6" value="새 버전 컨테이너 배포" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="915" y="163" width="216" height="29" as="geometry" />
+        <mxCell id="6" value="AWS CodeBuild" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="485" y="167" width="214" height="29" as="geometry" />
         </mxCell>
-        <mxCell id="7" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="990" y="89" width="66" height="66" as="geometry" />
+        <mxCell id="7" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.codebuild;fillColor=#C925D1;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="560" y="95" width="64" height="64" as="geometry" />
         </mxCell>
-        <mxCell id="8" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="270" y="136" as="sourcePoint" />
-            <mxPoint x="470" y="136" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="8" value="AWS CodeDeploy" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="965" y="167" width="214" height="29" as="geometry" />
         </mxCell>
-        <mxCell id="9" value="파이프라인 실행" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#545B64;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="280" y="98" width="180" height="28" as="geometry" />
+        <mxCell id="9" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.codedeploy;fillColor=#C925D1;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="95" width="64" height="64" as="geometry" />
         </mxCell>
         <mxCell id="10" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="720" y="136" as="sourcePoint" />
-            <mxPoint x="980" y="136" as="targetPoint" />
+            <mxPoint x="175" y="127" as="sourcePoint" />
+            <mxPoint x="550" y="127" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="11" value="별도 EC2 배포" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#545B64;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="755" y="98" width="190" height="28" as="geometry" />
+        <mxCell id="11" value="워크플로 실행" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#545B64;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="85" width="210" height="29" as="geometry" />
         </mxCell>
-        <mxCell id="12" value="전환 전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#FFFFFF;strokeColor=#AAB7B8;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
-          <mxGeometry x="25" y="258" width="550" height="420" as="geometry" />
-        </mxCell>
-        <mxCell id="13" value="Load Balancer" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="-5" y="523" width="215" height="29" as="geometry" />
-        </mxCell>
-        <mxCell id="14" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fillColor=#8C4FFF;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="70" y="450" width="65" height="65" as="geometry" />
-        </mxCell>
-        <mxCell id="15" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="324" y="415" width="212" height="29" as="geometry" />
-        </mxCell>
-        <mxCell id="16" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="399" y="345" width="62" height="62" as="geometry" />
-        </mxCell>
-        <mxCell id="17" value="Blue · 기존 버전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="348" y="305" width="170" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="18" value="백엔드 컨테이너" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#D86613;strokeWidth=1.4;fontSize=16;dashed=0;" vertex="1" parent="1">
-          <mxGeometry x="365" y="443" width="160" height="35" as="geometry" />
-        </mxCell>
-        <mxCell id="19" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="324" y="605" width="212" height="29" as="geometry" />
-        </mxCell>
-        <mxCell id="20" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="399" y="535" width="62" height="62" as="geometry" />
-        </mxCell>
-        <mxCell id="21" value="Green · 새 버전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="348" y="495" width="170" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="22" value="백엔드 컨테이너" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#D86613;strokeWidth=1.4;fontSize=16;dashed=0;" vertex="1" parent="1">
-          <mxGeometry x="365" y="633" width="160" height="35" as="geometry" />
-        </mxCell>
-        <mxCell id="23" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#147EBA;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
+        <mxCell id="12" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="135" y="479" as="sourcePoint" />
-            <mxPoint x="389" y="376" as="targetPoint" />
+            <mxPoint x="624" y="127" as="sourcePoint" />
+            <mxPoint x="1030" y="127" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" value="애플리케이션 빌드 결과" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#545B64;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="691" y="85" width="278" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="코드 변경 · 파이프라인 실행" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="209" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="애플리케이션 빌드" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="453" y="209" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="배포 실행" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="970" y="209" width="237" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="01  Green 배포 중" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=none;strokeColor=#AAB7B8;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="25" y="310" width="600" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="Load Balancer" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="5" y="618" width="212" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fillColor=#8C4FFF;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="80" y="548" width="62" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="Client&#10;서비스 요청" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="52" y="460" width="145" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="21" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="111" y="520" as="sourcePoint" />
+            <mxPoint x="111" y="541" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" value="Blue Environment" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#EFF5FC;strokeColor=#2563A6;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="298" y="366" width="295" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="Green Environment" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#EEF8F1;strokeColor=#24834A;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="298" y="616" width="295" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="271" y="488" width="212" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="346" y="418" width="62" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="Payment API v1" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#2563A6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="296" y="522" width="162" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="271" y="738" width="212" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="346" y="668" width="62" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="Payment API v2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#24834A;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="296" y="772" width="162" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="서비스&#10;요청 처리" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#2563A6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="444" y="433" width="137" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="새 버전&#10;배포" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#24834A;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="444" y="682" width="137" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="32" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#2563A6;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="142" y="579" as="sourcePoint" />
+            <mxPoint x="336" y="450" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="260" y="479" />
-              <mxPoint x="260" y="376" />
+              <mxPoint x="237" y="579" />
+              <mxPoint x="237" y="450" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="24" value="서비스 요청" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="152" y="422" width="190" height="35" as="geometry" />
+        <mxCell id="33" value="02  트래픽 전환 후" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=none;strokeColor=#AAB7B8;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="650" y="310" width="600" height="540" as="geometry" />
         </mxCell>
-        <mxCell id="25" value="전환 후" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#FFFFFF;strokeColor=#AAB7B8;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
-          <mxGeometry x="625" y="258" width="550" height="420" as="geometry" />
+        <mxCell id="34" value="Load Balancer" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="618" width="212" height="29" as="geometry" />
         </mxCell>
-        <mxCell id="26" value="Load Balancer" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="595" y="523" width="215" height="29" as="geometry" />
+        <mxCell id="35" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fillColor=#8C4FFF;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="705" y="548" width="62" height="62" as="geometry" />
         </mxCell>
-        <mxCell id="27" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fillColor=#8C4FFF;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="670" y="450" width="65" height="65" as="geometry" />
+        <mxCell id="36" value="Client&#10;서비스 요청" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="677" y="460" width="145" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="28" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="924" y="415" width="212" height="29" as="geometry" />
-        </mxCell>
-        <mxCell id="29" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="999" y="345" width="62" height="62" as="geometry" />
-        </mxCell>
-        <mxCell id="30" value="Blue · 기존 버전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="948" y="305" width="170" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="31" value="백엔드 컨테이너" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#D86613;strokeWidth=1.4;fontSize=16;dashed=0;" vertex="1" parent="1">
-          <mxGeometry x="965" y="443" width="160" height="35" as="geometry" />
-        </mxCell>
-        <mxCell id="32" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="924" y="605" width="212" height="29" as="geometry" />
-        </mxCell>
-        <mxCell id="33" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="999" y="535" width="62" height="62" as="geometry" />
-        </mxCell>
-        <mxCell id="34" value="Green · 새 버전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="948" y="495" width="170" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="35" value="백엔드 컨테이너" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#D86613;strokeWidth=1.4;fontSize=16;dashed=0;" vertex="1" parent="1">
-          <mxGeometry x="965" y="633" width="160" height="35" as="geometry" />
-        </mxCell>
-        <mxCell id="36" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#248814;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
+        <mxCell id="37" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="735" y="479" as="sourcePoint" />
-            <mxPoint x="989" y="566" as="targetPoint" />
+            <mxPoint x="736" y="520" as="sourcePoint" />
+            <mxPoint x="736" y="541" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="38" value="Blue Environment" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#EFF5FC;strokeColor=#2563A6;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="923" y="366" width="295" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="39" value="Green Environment" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#EEF8F1;strokeColor=#24834A;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="923" y="616" width="295" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="40" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="896" y="488" width="212" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="41" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="971" y="418" width="62" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="42" value="Payment API v1" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#2563A6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="921" y="522" width="162" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="896" y="738" width="212" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="44" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="971" y="668" width="62" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="45" value="Payment API v2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#24834A;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="921" y="772" width="162" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="46" value="전환 후&#10;요청 제외" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#2563A6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1069" y="433" width="137" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="47" value="서비스&#10;요청 처리" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#24834A;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1069" y="682" width="137" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="48" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#24834A;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="767" y="579" as="sourcePoint" />
+            <mxPoint x="961" y="700" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="860" y="479" />
-              <mxPoint x="860" y="566" />
+              <mxPoint x="862" y="579" />
+              <mxPoint x="862" y="700" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="37" value="서비스 요청" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="752" y="422" width="190" height="35" as="geometry" />
+        <mxCell id="49" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#B75E08;strokeWidth=1.7;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1070" y="242" as="sourcePoint" />
+            <mxPoint x="336" y="700" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1070" y="270" />
+              <mxPoint x="612" y="270" />
+              <mxPoint x="612" y="600" />
+              <mxPoint x="280" y="600" />
+              <mxPoint x="280" y="700" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="38" value="기존 버전 운영 중 새 버전 배포 → 로드밸런서 대상 그룹 및 라우팅 전환" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=19;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="25" y="710" width="1150" height="30" as="geometry" />
+        <mxCell id="50" value="새 버전 배포" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#B75E08;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="315" y="573" width="245" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="51" value="배포 중 Blue에서 요청 처리 → 로드밸런서 대상 그룹 전환 → Green에서 요청 처리" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=19;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="31" y="867" width="1200" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowDown, ArrowUpRight, Check, Download, Github, Maximize2, X } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Github, Maximize2, X } from 'lucide-react';
 import { extraPrs, focus, links, prUrl, skills } from './content';
 
 const asset = path => `${import.meta.env.BASE_URL}${path}`;
@@ -7,8 +7,8 @@ const diagrams = 'images/autoever/';
 const diagramSizes = {
   'lookup-paths.svg': [1001, 621],
   'operator-flow.svg': [1218, 811],
-  'runtime-architecture.svg': [1201, 761],
-  'bluegreen-deployment.svg': [1206, 761],
+  'runtime-architecture.svg': [1281, 991],
+  'bluegreen-deployment.svg': [1281, 921],
 };
 
 function External({ href, children, className = '' }) {
@@ -72,14 +72,13 @@ export default function App() {
       <section className="ae-hero ae-wrap" id="top">
         <div className="ae-hero-grid"><div>
           <p className="ae-eyebrow">HYUNDAI AUTOEVER · 2026 PORTFOLIO</p>
-          <p className="ae-role">컨테이너 플랫폼 구축 및 운영 지원</p>
-          <h1>컨테이너 플랫폼 엔지니어<br />포트폴리오</h1>
+          <h1>Yeonsoo Kim</h1>
+          <p className="ae-role">플랫폼 엔지니어 · 김연수</p>
           <p className="ae-lead">Kubernetes 운영 도구의 조회 성능을 개선하고, 배포 상태 점검과 컨테이너 배포를 자동화했습니다. 반복 작업을 줄이는 과정에서도 데이터의 최신성과 서비스 준비 상태를 함께 확인했습니다.</p>
           <div className="ae-hero-actions"><a className="ae-button" href="#open-source">대표 사례 살펴보기<ArrowDown size={17} /></a><External href={links.github}>GitHub</External></div>
         </div>
         <aside className="ae-focus" aria-labelledby="focus-title"><p className="ae-eyebrow" id="focus-title">CURRENTLY FOCUSED ON</p>{focus.map((item, i) => <div className="ae-focus-item" key={item.title}><span className="ae-focus-number">0{i + 1}</span><div><h2>{item.title}</h2><p>{item.text}</p></div></div>)}</aside>
         </div>
-        <dl className="ae-metrics"><div><dt>100개 Application 조회 실험</dt><dd>99.99<span>% 이상 단축</span></dd><p>약 19초 → 0.421밀리초</p></div><div><dt>컨테이너 빌드·배포 자동화</dt><dd>30 → 10<span>분</span></dd><p>수동 배포 시간 대비 약 67% 단축</p></div><div><dt>Argo CD Agent 오픈소스 기여</dt><dd>5<span>개 PR 병합</span></dd><p>조회 경로, 통신 정책, 테스트 개선</p></div></dl>
       </section>
 
       <section className="ae-section ae-wrap" id="open-source">
@@ -88,13 +87,20 @@ export default function App() {
           <div className="ae-narrative">
             <Paragraph label="Application 조회 구조 분석"><p>Argo CD Agent에 기여하며 로컬 클러스터에서 Application 조회 경로를 분석했습니다. CRD로 정의된 리소스를 조회할 때마다 Kubernetes API 서버를 호출하고 있어, 일반 조회에 기존 로컬 메모리 캐시를 활용하도록 개선했습니다.</p></Paragraph>
             <Paragraph label="조회 경로 분리"><p>캐시는 리소스 변경 사항을 반영하지만 실제 상태보다 늦게 갱신될 수 있습니다. 업데이트 과정에서 오래된 정보를 반복해서 읽으면 충돌을 재시도해도 해결되지 않을 수 있어, 업데이트용 조회는 API 서버를 직접 호출하도록 유지했습니다.</p><p>리뷰에서는 캐시의 공유 객체를 호출자가 변경할 위험도 확인했습니다. 원본을 보호하도록 복사본을 반환하고, 수정한 코드의 테스트와 리뷰를 거쳐 기여가 병합됐습니다.</p></Paragraph>
-            <div className="ae-result"><Check size={19} aria-hidden="true" /><p><strong>100개 Application 조회 실험에서 99.99% 이상 시간 단축</strong>Prometheus로 별도 측정해 공식 오픈소스 발표회에서 사용한 결과입니다. 조회 시간은 약 19초에서 0.421밀리초로, API 호출은 300회에서 200회로 줄었습니다.</p></div>
+
             <div className="ae-evidence-links"><External href={prUrl(525)}>PR #525 · 변경 코드와 리뷰</External><External href="https://github.com/argoproj-labs/argocd-agent/actions/runs/18391317892">병합 시점의 CI 결과</External></div>
           </div>
-          <div className="ae-visual-column"><Diagram file="lookup-paths.svg" title="Application 조회 경로" caption="PR #525의 일반 조회와 업데이트용 조회 경로를 중심으로 재구성했습니다." onOpen={setPreview} /><div className="ae-measurement"><p className="ae-eyebrow">MEASURED RESULT</p><div><span>조회 시간</span><strong>19초 <span>→</span> 0.421ms</strong></div><div><span>API 호출</span><strong>300회 <span>→</span> 200회</strong></div><p>100개 Application을 대상으로 한 조회 실험의 결과이며, 전체 서비스 응답 시간의 개선율을 의미하지 않습니다.</p></div></div>
+          <div className="ae-visual-column"><Diagram file="lookup-paths.svg" title="Application 조회 경로" caption="PR #525의 일반 조회와 업데이트용 조회 경로를 중심으로 재구성했습니다." onOpen={setPreview} /></div>
         </div>
         <div className="ae-test-evidence">
-          <h3>성능 측정 결과</h3>
+          <h3>기여 성과</h3>
+          <ul className="ae-bullets ae-results-list">
+            <li>100개 Application 조회 실험: <strong>약 19초 → 0.421밀리초, 조회 시간 99.99% 이상 단축</strong></li>
+            <li>같은 실험의 API 호출: <strong>300회 → 200회 감소</strong></li>
+            <li>코드와 매니페스트 개선: <strong>공식 프로젝트에 PR 5개 병합</strong></li>
+            <li>오픈소스 기여 활동: <strong>한국IT비즈니스진흥협회장상 수상</strong></li>
+          </ul>
+          <p className="ae-measurement-note">성능 수치는 Prometheus로 별도 측정해 오픈소스 발표회에 사용한 조회 실험 결과입니다.</p>
           <EvidenceImage path="images/portfolio/argocd-performance.png" width={1326} height={325} title="Prometheus API 호출 측정 자료" caption="당시 발표에 사용한 API 호출 횟수 그래프입니다. 표시된 구간의 누적값 증가량은 각각 300회와 200회이며, 조회 시간은 별도로 측정했습니다." onOpen={setPreview} />
         </div>
         <div className="ae-support-case"><div><span className="ae-small-label">추가 기여 · PR #574</span><h3>Redis 통신에 필요한 NetworkPolicy 보완</h3><p>NetworkPolicy를 집행하는 환경에서 Redis 접근이 제한된다는 이슈를 확인하고, 대상 Pod의 레이블과 Redis 방향 TCP 6379 Egress 정책을 매니페스트에 반영했습니다. 리뷰를 통해 Agent와 Principal의 적용 범위를 보완하고 Helm과 Kustomize의 통신 방향을 일치시켰습니다.</p></div><External href={prUrl(574)}>정책 변경과 리뷰 확인</External></div>
@@ -109,21 +115,59 @@ export default function App() {
 
       <section className="ae-section ae-section-tint" id="operator"><div className="ae-wrap">
         <SectionHeading number="02" eyebrow="KUBERNETES OPERATOR" title="Kubernetes 모니터링 Operator 개발">스터디 프로젝트 · CRD와 Reconcile을 활용한 배포 상태 감시</SectionHeading>
-        <div className="ae-operator-copy"><Paragraph label="CRD 및 컨트롤러 구현"><p>배포할 때마다 상태를 직접 조회하는 부담을 줄이고자 모니터링 Operator를 개발했습니다. 배포 설정을 일관되게 관리하도록 CRD로 설정의 구조를 정의하고, 컨트롤러의 Reconcile에서 CR을 읽어 Deployment를 구성했습니다.</p></Paragraph>
-          <Paragraph label="배포 준비 상태 판단"><p>Pod가 실행 중이어도 readiness probe에 실패하면 서비스가 준비되지 않을 수 있다는 점을 고려했습니다. 따라서 리소스 구성만으로 완료를 판단하지 않고 Deployment의 상태를 조회해 서비스 준비 여부를 확인하도록 구현했습니다.</p></Paragraph>
-          <Paragraph label="상태 알림 검증"><p>확인한 배포 상태는 알림으로 전달했습니다. Deployment의 실제 상태 변화와 알림 수신 내역을 대조해 배포 진행과 결과가 전달되는지 확인했습니다. 선언한 설정을 반영하는 리소스 관리에 상태 감시를 결합해 반복 점검을 자동화했습니다.</p></Paragraph>
+        <div className="ae-operator-copy">
+          <Paragraph label="구현 목적">
+            <ul className="ae-bullets">
+              <li>배포할 때마다 수동으로 조회하던 애플리케이션 상태 점검 자동화</li>
+              <li>Deployment의 배포 진행과 결과를 감지해 운영자에게 알림 전달</li>
+            </ul>
+          </Paragraph>
+          <Paragraph label="리소스 관리 및 상태 판단">
+            <ul className="ae-bullets">
+              <li>CRD로 배포 설정의 구조 정의, Reconcile에서 CR을 읽어 Deployment 구성</li>
+              <li>Pod가 실행 중이어도 readiness probe에 실패할 수 있는 상황 고려</li>
+              <li>Deployment 상태를 조회해 애플리케이션의 서비스 준비 여부 판단</li>
+            </ul>
+          </Paragraph>
+          <Paragraph label="알림 검증">
+            <ul className="ae-bullets">
+              <li>서비스 준비 여부를 포함한 배포 상태 알림 구현</li>
+              <li>Deployment의 실제 상태 변화와 알림 수신 내역을 대조해 동작 확인</li>
+            </ul>
+          </Paragraph>
         </div>
         <Diagram file="operator-flow.svg" title="Kubernetes Operator 아키텍처" caption="스터디 구현을 바탕으로 재구성했습니다. Operator는 API 서버를 통해 CR과 Deployment를 관리하며, kubelet이 수행한 readiness probe의 결과는 리소스 상태에 반영됩니다." onOpen={setPreview} />
-        <div className="ae-download-row"><p>조회 경로와 Operator 구조의 편집 가능한 원본입니다.</p><a className="ae-link" href={asset('diagrams/autoever-kubernetes.drawio')} download><Download size={17} /> draw.io 원본 받기</a></div>
       </div></section>
 
       <section className="ae-section ae-wrap" id="delivery">
-        <SectionHeading number="03" eyebrow="CLOUD & DELIVERY" title="멀티클라우드 서비스 배포 자동화">졸업프로젝트 · GCP 데이터 수집 서비스와 AWS 백엔드</SectionHeading>
-        <div className="ae-delivery-intro"><Paragraph label="서비스별 실행 환경"><p>데이터 수집 서비스와 백엔드를 각각 독립적으로 배포할 수 있도록 분리하고 gRPC로 연결했습니다. GCP에 수집 서비스를, AWS에 백엔드를 두고 Dockerfile과 Docker Compose로 서비스별 의존성과 실행 설정을 구성했습니다.</p></Paragraph><Paragraph label="CI/CD 파이프라인"><p>업데이트마다 인스턴스에 접속해 컨테이너를 교체하는 데 시간이 걸렸습니다. GitHub Actions로 애플리케이션 빌드부터 새 버전 컨테이너 배포까지 자동화해 배포 시간을 30분에서 10분으로 줄였습니다.</p></Paragraph></div>
-        <Diagram file="runtime-architecture.svg" title="AWS·GCP 서비스 실행 구조" caption="본인 설명을 바탕으로 재구성했습니다. gRPC는 두 서비스 사이의 논리적 통신 관계이며, 클라우드 간 네트워크의 세부 경로는 표시하지 않았습니다." onOpen={setPreview} />
-        <div className="ae-bluegreen-copy"><div><p className="ae-small-label">배포 방식</p><h3>블루그린 배포</h3></div><p>두 버전을 서로 다른 EC2에서 실행하고 AWS 로드밸런서의 대상 그룹과 라우팅을 전환하도록 구성했습니다. EC2는 퍼블릭 서브넷에, RDS는 프라이빗 서브넷에 배치했습니다.</p></div>
-        <Diagram file="bluegreen-deployment.svg" title="빌드 자동화와 블루그린 트래픽 전환" caption="기존 버전이 요청을 처리하는 동안 새 버전을 별도 EC2에 배포하고, 로드밸런서의 대상 그룹과 라우팅을 전환하는 구성입니다." onOpen={setPreview} />
-        <div className="ae-download-row"><p>두 아키텍처는 각각의 도형과 연결선을 편집할 수 있습니다.</p><a className="ae-link" href={asset('diagrams/autoever-deployment.drawio')} download><Download size={17} /> draw.io 원본 받기</a></div>
+        <SectionHeading number="03" eyebrow="CLOUD & DELIVERY" title="실시간 결제 시스템 — CI/CD 및 블루그린 배포">졸업프로젝트 · AWS와 GCP를 활용한 서비스 분리 및 독립 배포</SectionHeading>
+        <div className="ae-delivery-intro">
+          <Paragraph label="서비스 및 실행 환경">
+            <ul className="ae-bullets">
+              <li>GCP의 데이터 수집 서비스와 AWS의 백엔드를 분리하고 gRPC로 연결</li>
+              <li>서비스별 Dockerfile과 Docker Compose로 의존성과 실행 설정 관리</li>
+              <li>각 서비스의 독립 배포 구성, EC2는 퍼블릭 서브넷에 배치하고 RDS는 프라이빗 서브넷에 분리</li>
+            </ul>
+          </Paragraph>
+          <Paragraph label="배포 자동화">
+            <ul className="ae-bullets">
+              <li>인스턴스에 접속해 컨테이너를 수동으로 교체하던 배포 절차 개선</li>
+              <li>GitHub Actions에 CodeBuild와 CodeDeploy를 연계해 애플리케이션 빌드와 새 버전 배포 자동화</li>
+              <li><strong>배포 시간 30분 → 10분, 약 67% 단축</strong></li>
+            </ul>
+          </Paragraph>
+        </div>
+        <Diagram file="runtime-architecture.svg" title="실시간 결제 시스템 배포 아키텍처" caption="GCP 수집 서비스와 AWS 백엔드의 독립 배포 구성입니다. 두 서비스의 gRPC 연결은 논리적 통신 관계로 표시했습니다." onOpen={setPreview} />
+        <div className="ae-bluegreen-copy">
+          <h3>블루그린 배포 및 트래픽 전환</h3>
+          <ul className="ae-bullets">
+            <li>서로 다른 EC2를 Blue와 Green 환경으로 분리해 두 버전 실행</li>
+            <li>Blue가 서비스 요청을 처리하는 동안 Green에 새 버전 배포</li>
+            <li>AWS 로드밸런서의 대상 그룹과 라우팅을 Green으로 전환해 서비스 중단 위험 최소화</li>
+          </ul>
+        </div>
+        <Diagram file="bluegreen-deployment.svg" title="CI/CD 파이프라인 및 Blue·Green 트래픽 전환" caption="GitHub Actions와 CodeBuild·CodeDeploy의 CI/CD 흐름, 로드밸런서의 트래픽 전환을 구분했습니다. Blue와 Green은 서로 다른 EC2 실행 환경입니다." onOpen={setPreview} />
+
       </section>
 
       <section className="ae-section ae-section-tint" id="homelab"><div className="ae-wrap">
@@ -171,7 +215,13 @@ export default function App() {
 
       <section className="ae-section ae-section-tint" id="about"><div className="ae-wrap">
         <SectionHeading number="08" eyebrow="BACKGROUND" title="기술 역량 및 주요 활동" />
-        <div className="ae-background-grid"><div><h3>기술 활용 경험</h3><dl className="ae-skills">{skills.map(skill => <div key={skill.label}><dt>{skill.label}</dt><dd><a href={skill.target}>{skill.evidence}<ArrowUpRight size={15} aria-hidden="true" /></a></dd></div>)}</dl></div><div className="ae-credentials"><article><span className="ae-small-label">AWARD</span><h3>한국IT비즈니스진흥협회장상</h3><p>오픈소스 기여 활동으로 수상했습니다.</p></article><article><span className="ae-small-label">COMMUNITY</span><h3>10개 대학, 200명 이상의 클라우드·AI 연합동아리</h3><p>초기 공동 회장으로 커뮤니티 지원을 확보해 무료 워크숍을 열었습니다. 사전 설문을 바탕으로 실습 난이도와 멘토링을 조정했고, 매 행사에 100명 이상이 참여했습니다. 차기 회장단에 운영 경험을 전수하며 3년째 이어지는 활동에 기여했습니다.</p></article><article><span className="ae-small-label">EDUCATION & CERTIFICATIONS</span><h3>이화여자대학교 컴퓨터공학 전공</h3><p>AWS Certified Solutions Architect – Associate<br />SQLD</p></article></div></div>
+        <div className="ae-background-grid">
+          <div><h3>기술 스택</h3><dl className="ae-skills">{skills.map(skill => <div key={skill.label}><dt>{skill.label}</dt><dd>{skill.technologies}</dd></div>)}</dl></div>
+          <div className="ae-credentials">
+            <article><span className="ae-small-label">COMMUNITY</span><h3>클라우드·AI 연합동아리 공동 회장</h3><p>10개 대학, 200명 이상이 참여하는 연합동아리의 초기 공동 회장을 맡았습니다. 커뮤니티 지원으로 무료 워크숍을 열고, 사전 설문을 바탕으로 실습 난이도와 멘토링을 조정했습니다. 매 행사에 100명 이상이 참여했으며, 차기 회장단에 운영 경험을 전수해 후속 활동을 지원했습니다.</p></article>
+            <article><span className="ae-small-label">EDUCATION</span><h3>이화여자대학교</h3><p>컴퓨터공학 전공</p></article>
+          </div>
+        </div>
       </div></section>
     </main>
     <footer className="ae-footer ae-wrap"><div><strong>김연수 <span>Yeonsoo Kim</span></strong><p>컨테이너 플랫폼 구축 및 운영 포트폴리오</p></div><div className="ae-footer-links"><External href={links.github}>GitHub</External><External href={links.linkedin}>LinkedIn</External><External href={links.blog}>기술 블로그</External></div><p className="ae-footer-note">© 2026 Yeonsoo Kim. 개인 지원용 포트폴리오입니다.</p></footer>
