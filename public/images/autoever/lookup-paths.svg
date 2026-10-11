@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 565" role="img" aria-labelledby="title desc">
+<title id="title">조회 목적에 따른 경로 분리</title>
+<desc id="desc">확인된 구성과 본인 설명을 바탕으로 재구성한 구조도</desc>
+<defs>
+<marker id="arrow0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#647b8b"/></marker>
+<marker id="arrow1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#177b75"/></marker>
+<marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#183a58"/></marker>
+</defs><rect width="100%" height="100%" fill="#fff"/>
+<text x="450.0" y="48.75" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="25" font-weight="450" fill="#183a58">Argo CD Agent · Application 조회</text>
+<text x="147.5" y="104.35" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="21" font-weight="450" fill="#177b75">일반 조회</text>
+<rect x="35" y="135" width="220" height="105" rx="9" fill="#ffffff" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="145.0" y="179.79999999999998" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="650" fill="#183a58">Application</text>
+<text x="145.0" y="210.59999999999997" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="450" fill="#183a58">조회 요청</text>
+<rect x="335" y="135" width="230" height="105" rx="9" fill="#eef7f5" stroke="#92bdb7" stroke-width="1.5"/>
+<text x="450.0" y="179.79999999999998" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="650" fill="#177b75">로컬 메모리 캐시</text>
+<text x="450.0" y="210.59999999999997" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="450" fill="#177b75">변경 사항 반영</text>
+<rect x="645" y="135" width="220" height="105" rx="9" fill="#ffffff" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="755.0" y="179.79999999999998" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="650" fill="#183a58">복사본 반환</text>
+<text x="755.0" y="210.59999999999997" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="450" fill="#183a58">공유 객체 보호</text>
+<polyline points="255,187 335,187" fill="none" stroke="#177b75" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arrow1)"/>
+<polyline points="565,187 645,187" fill="none" stroke="#177b75" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arrow1)"/>
+<text x="147.5" y="326.35" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="21" font-weight="450" fill="#183a58">업데이트용 조회</text>
+<rect x="35" y="355" width="220" height="105" rx="9" fill="#ffffff" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="145.0" y="399.8" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="650" fill="#183a58">Application</text>
+<text x="145.0" y="430.6" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="450" fill="#183a58">업데이트용 조회</text>
+<rect x="335" y="355" width="230" height="105" rx="9" fill="#eef3f9" stroke="#a6bace" stroke-width="1.5"/>
+<text x="450.0" y="399.8" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="650" fill="#183a58">Kubernetes</text>
+<text x="450.0" y="430.6" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="450" fill="#183a58">API 서버</text>
+<rect x="645" y="355" width="220" height="105" rx="9" fill="#ffffff" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="755.0" y="399.8" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="650" fill="#183a58">직접 조회 결과</text>
+<text x="755.0" y="430.6" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="450" fill="#183a58">최신 정보 확인</text>
+<polyline points="255,407 335,407" fill="none" stroke="#183a58" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arrow2)"/>
+<polyline points="565,407 645,407" fill="none" stroke="#183a58" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arrow2)"/>
+<polyline points="450,355 450,240" fill="none" stroke="#647b8b" stroke-width="2.4" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#arrow0)"/>
+<text x="552.5" y="286.55" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="17" font-weight="450" fill="#647b8b">변경 사항을</text>
+<text x="552.5" y="310.35" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="17" font-weight="450" fill="#647b8b">캐시에 반영</text>
+<text x="450.0" y="526.3" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="18" font-weight="450" fill="#647b8b">일반 조회의 반복 호출은 줄이고, 업데이트에는 직접 조회를 유지했습니다.</text>
+</svg>

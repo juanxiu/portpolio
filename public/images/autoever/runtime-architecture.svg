@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 785" role="img" aria-labelledby="title desc">
+<title id="title">AWS·GCP 서비스 실행 구조</title>
+<desc id="desc">확인된 구성과 본인 설명을 바탕으로 재구성한 구조도</desc>
+<defs>
+<marker id="arrow0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#647b8b"/></marker>
+<marker id="arrow1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#177b75"/></marker>
+<marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#183a58"/></marker>
+</defs><rect width="100%" height="100%" fill="#fff"/>
+<rect x="30" y="195" width="305" height="260" rx="9" fill="#f2f7fa" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="50" y="227.0" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="23" font-weight="650" fill="#183a58">GCP</text>
+<rect x="55" y="285" width="255" height="95" rx="9" fill="#ffffff" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="182.5" y="324.8" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="650" fill="#183a58">데이터 수집 서비스</text>
+<text x="182.5" y="355.6" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="450" fill="#183a58">독립 배포</text>
+<rect x="415" y="90" width="745" height="640" rx="9" fill="#fafbfd" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="435" y="122.0" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="23" font-weight="650" fill="#183a58">AWS · VPC 기반 백엔드</text>
+<rect x="445" y="157" width="685" height="342" rx="9" fill="#f1f5fa" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="465" y="189.0" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="20" font-weight="650" fill="#183a58">퍼블릭 서브넷</text>
+<rect x="445" y="535" width="685" height="152" rx="9" fill="#eef7f5" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="465" y="567.0" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="20" font-weight="650" fill="#177b75">프라이빗 서브넷</text>
+<rect x="475" y="246" width="210" height="82" rx="9" fill="#ffffff" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="580.0" y="280.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="20" font-weight="650" fill="#183a58">로드밸런서</text>
+<text x="580.0" y="308.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="20" font-weight="450" fill="#183a58">대상 그룹 전환</text>
+<rect x="765" y="220" width="315" height="106" rx="9" fill="#eaf1f9" stroke="#9eb5cd" stroke-width="1.5"/>
+<text x="922.5" y="265.3" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="650" fill="#183a58">EC2 · 기존 버전</text>
+<text x="922.5" y="296.1" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="450" fill="#183a58">백엔드 컨테이너</text>
+<rect x="765" y="363" width="315" height="106" rx="9" fill="#eef7f5" stroke="#8fbbb4" stroke-width="1.5"/>
+<text x="922.5" y="408.3" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="650" fill="#177b75">EC2 · 새 버전</text>
+<text x="922.5" y="439.1" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="450" fill="#177b75">백엔드 컨테이너</text>
+<rect x="765" y="593" width="315" height="64" rx="9" fill="#fff" stroke="#94b6b0" stroke-width="1.5"/>
+<text x="922.5" y="632.7" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="650" fill="#177b75">RDS</text>
+<rect x="55" y="42" width="255" height="76" rx="9" fill="#ffffff" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="182.5" y="87.7" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="22" font-weight="650" fill="#183a58">서비스 요청</text>
+<polyline points="182,118 182,150 385,150 385,287 475,287" fill="none" stroke="#183a58" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arrow2)"/>
+<polyline points="310,332 415,332" fill="none" stroke="#177b75" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arrow1)"/>
+<text x="364.5" y="304.95" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="17" font-weight="450" fill="#177b75">gRPC</text>
+<polyline points="685,273 765,273" fill="none" stroke="#183a58" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arrow2)"/>
+<polyline points="685,299 722,299 722,416 765,416" fill="none" stroke="#177b75" stroke-width="2.4" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#arrow1)"/>
+<polyline points="1080,273 1102,273 1102,610 1080,610" fill="none" stroke="#183a58" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arrow2)"/>
+<polyline points="922,469 922,593" fill="none" stroke="#177b75" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arrow1)"/>
+<text x="182.5" y="507.7" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="18" font-weight="450" fill="#647b8b">gRPC는 서비스 간</text>
+<text x="182.5" y="532.9" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="18" font-weight="450" fill="#647b8b">논리적 통신 관계입니다.</text>
+<text x="600.0" y="761.65" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="19" font-weight="450" fill="#647b8b">서로 다른 EC2에서 두 버전을 실행하며 로드밸런서의 대상 그룹과 라우팅을 전환합니다.</text>
+</svg>

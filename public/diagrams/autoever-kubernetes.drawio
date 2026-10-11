@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="Portfolio diagrams" version="24.7.17" type="device">
+  <diagram id="lookup-paths" name="조회 목적에 따른 경로 분리">
+    <mxGraphModel dx="900" dy="565" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="565" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Argo CD Agent · Application 조회" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=25;fontColor=#183a58;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="30" y="15" width="840" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="general" value="일반 조회" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=21;fontColor=#177b75;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="30" y="78" width="235" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="read" value="Application&lt;br&gt;조회 요청" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#183a58;fillColor=#ffffff;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="35" y="135" width="220" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="cache" value="로컬 메모리 캐시&lt;br&gt;변경 사항 반영" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#177b75;fillColor=#eef7f5;strokeColor=#92bdb7;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="335" y="135" width="230" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="read-result" value="복사본 반환&lt;br&gt;공유 객체 보호" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#183a58;fillColor=#ffffff;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="645" y="135" width="220" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="read-cache" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#177b75;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="255" y="187" as="sourcePoint" />
+            <mxPoint x="335" y="187" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cache-result" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#177b75;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565" y="187" as="sourcePoint" />
+            <mxPoint x="645" y="187" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="update-title" value="업데이트용 조회" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=21;fontColor=#183a58;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="30" y="300" width="235" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="update" value="Application&lt;br&gt;업데이트용 조회" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#183a58;fillColor=#ffffff;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="35" y="355" width="220" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="api" value="Kubernetes&lt;br&gt;API 서버" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#183a58;fillColor=#eef3f9;strokeColor=#a6bace;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="335" y="355" width="230" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="update-result" value="직접 조회 결과&lt;br&gt;최신 정보 확인" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#183a58;fillColor=#ffffff;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="645" y="355" width="220" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="update-api" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#183a58;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="255" y="407" as="sourcePoint" />
+            <mxPoint x="335" y="407" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="api-result" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#183a58;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565" y="407" as="sourcePoint" />
+            <mxPoint x="645" y="407" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sync" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#647b8b;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="355" as="sourcePoint" />
+            <mxPoint x="450" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sync-label" value="변경 사항을&lt;br&gt;캐시에 반영" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=17;fontColor=#647b8b;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="465" y="265" width="175" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="foot" value="일반 조회의 반복 호출은 줄이고, 업데이트에는 직접 조회를 유지했습니다." style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=18;fontColor=#647b8b;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="500" width="850" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="operator-flow" name="CR 설정 반영과 배포 상태 감시">
+    <mxGraphModel dx="900" dy="675" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="675" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="모니터링 Operator · 컨트롤러의 역할" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=25;fontColor=#183a58;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="30" y="12" width="840" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="crd" value="CRD&lt;br&gt;배포 설정의 구조" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#183a58;fillColor=#f5f8fa;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="95" width="220" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="cr" value="CR&lt;br&gt;선언한 배포 설정" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#183a58;fillColor=#ffffff;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="265" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="controller" value="컨트롤러&lt;br&gt;Reconcile" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#177b75;fillColor=#eef7f5;strokeColor=#92bdb7;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="335" y="265" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment" value="Deployment&lt;br&gt;실제 배포 리소스" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#183a58;fillColor=#ffffff;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="640" y="265" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="defines" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#647b8b;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="177" as="sourcePoint" />
+            <mxPoint x="150" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="defines-label" value="구조 정의" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=17;fontColor=#647b8b;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="158" y="202" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="read" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#177b75;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="312" as="sourcePoint" />
+            <mxPoint x="335" y="312" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="reflect" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#177b75;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565" y="290" as="sourcePoint" />
+            <mxPoint x="640" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="reflect-label" value="설정 반영" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=17;fontColor=#177b75;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="565" y="243" width="75" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="observe" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#647b8b;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="337" as="sourcePoint" />
+            <mxPoint x="565" y="337" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="observe-label" value="상태 조회" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=17;fontColor=#647b8b;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="565" y="358" width="75" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="judgment" value="배포 상태 판단&lt;br&gt;서비스 준비 여부 확인" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=20;fontColor=#177b75;fillColor=#eef7f5;strokeColor=#92bdb7;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="335" y="475" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="notify" value="상태 변경 알림&lt;br&gt;진행 · 완료 · 실패" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=20;fontColor=#183a58;fillColor=#ffffff;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="640" y="475" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="judge" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#177b75;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="360" as="sourcePoint" />
+            <mxPoint x="450" y="475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="notify-path" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#177b75;dashed=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565" y="522" as="sourcePoint" />
+            <mxPoint x="640" y="522" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="loop" value="Reconcile은 같은 대상을&lt;br&gt;반복해서 처리합니다." style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=18;fontColor=#647b8b;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="30" y="400" width="250" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="foot" value="Deployment 상태 변화와 알림 수신 내역을 대조해 동작을 확인했습니다." style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=18;fontColor=#647b8b;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="600" width="850" height="46" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
