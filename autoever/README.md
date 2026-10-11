@@ -45,13 +45,15 @@ npm run preview
 - `public/diagrams/autoever-deployment.drawio`: 서비스 실행 구조와 CI/CD·블루그린 전환 2페이지
 - `public/diagrams/autoever-kubernetes.drawio`: 조회 경로 분리와 Operator 구조 2페이지
 - `public/images/autoever/`: 웹용 SVG 4장
-- `scripts/create-autoever-diagrams.py`: 동일 좌표와 문구에서 SVG와 draw.io XML을 생성
+- `scripts/create-autoever-diagrams.py`: draw.io Desktop을 호출해 원본에서 웹용 SVG를 내보내는 도구
 
 ```sh
 python3 scripts/create-autoever-diagrams.py
 ```
 
-draw.io 파일은 이미지 한 장이 아니라 개별 도형과 연결선으로 구성되어 있다. 본인 설명과 공개 PR을 바탕으로 재구성한 그림이며 실행 화면 캡처가 아니다. draw.io에서 직접 수정한 뒤 스크립트를 다시 실행하면 변경이 덮어써지므로, 지속할 변경은 생성 스크립트에도 반영한다.
+draw.io 원본이 편집 기준이다. AWS의 EC2·RDS·Elastic Load Balancing 및 그룹 도형과 Kubernetes 리소스 아이콘은 draw.io 내장 라이브러리를 사용한다. draw.io에서 원본을 수정한 뒤 위 명령으로 SVG를 내보낸다. 스크립트는 원본을 재생성하거나 덮어쓰지 않는다. draw.io Desktop 27 이상이 필요하며, 설치 위치가 다르면 DRAWIO_BIN 환경 변수로 실행 파일을 지정한다.
+
+그림은 본인 설명과 공개 PR을 바탕으로 재구성했다. Operator의 직접 구현과 Kubernetes 기본 리소스 관리 관계는 선과 영역으로 구분한다. GCP 실행 제품이나 로드밸런서 종류, 자동 롤백 등 미확인 구성은 추가하지 않았다.
 
 ## 검증 기준
 
@@ -63,3 +65,11 @@ draw.io 파일은 이미지 한 장이 아니라 개별 도형과 연결선으�
 - 기존 공개 페이지의 소스·내용 보존 및 배포 후 익명 접속
 
 이 포트폴리오는 정적 파일이며 로그인, 폼 전송, 방문자 데이터 수집 기능을 추가하지 않았다.
+
+## 2026-10-12 수정 기준
+
+- 섹션 제목과 내부 소제목은 프로젝트명·역할·구현 대상을 나타내는 명사형으로 작성한다.
+- 인턴의 처리 성공률과 도입 기간은 해당 행동을 설명한 본문 안에서 굵게 표시한다. 별도 대형 성과 카드를 만들지 않는다.
+- Prometheus API 호출 측정 이미지는 본문에 노출한다. 조회 시간은 별도로 측정한 지표이며 그래프 수치와 혼동하지 않는다.
+- MUSAI를 보조 프로젝트로 추가했다. 예약·재고 동시성 제어와 Sentry는 기존 DX 기록을, 장학금 300만 원은 사용자 확인을 따른다. Hedge는 기존 페이지에 보존한다.
+- MUSAI 서비스 이미지는 기존 프로젝트 원본을 유지한다. 장학금은 수혜 성과로 표현하며 대회 수상이나 인프라 성능 평가로 확대하지 않는다.

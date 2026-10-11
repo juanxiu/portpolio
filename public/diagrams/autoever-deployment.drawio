@@ -1,179 +1,277 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mxfile host="app.diagrams.net" agent="Portfolio diagrams" version="24.7.17" type="device">
-  <diagram id="runtime-architecture" name="AWS·GCP 서비스 실행 구조">
-    <mxGraphModel dx="1200" dy="785" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="785" math="0" shadow="0">
+<mxfile host="Electron" version="31.0.2" type="device">
+  <diagram name="AWS·GCP 서비스 배포 아키텍처" id="AWS·GCP 서비스 배포 아키텍처">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1200" pageHeight="760" background="#FFFFFF">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="gcp" value="GCP" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=23;fontColor=#183a58;fillColor=#f2f7fa;strokeColor=#ccd9e1;verticalAlign=top;align=left;spacingTop=12;spacingLeft=20;" vertex="1" parent="1">
-          <mxGeometry x="30" y="195" width="305" height="260" as="geometry" />
+        <mxCell id="2" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=none;strokeWidth=1.4;fontSize=18;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="1200" height="760" as="geometry" />
         </mxCell>
-        <mxCell id="collector" value="데이터 수집 서비스&lt;br&gt;독립 배포" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#183a58;fillColor=#ffffff;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="55" y="285" width="255" height="95" as="geometry" />
+        <mxCell id="3" value="AWS · GCP 서비스 배포 아키텍처" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=25;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="25" y="10" width="1150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="aws" value="AWS · VPC 기반 백엔드" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=23;fontColor=#183a58;fillColor=#fafbfd;strokeColor=#ccd9e1;verticalAlign=top;align=left;spacingTop=12;spacingLeft=20;" vertex="1" parent="1">
-          <mxGeometry x="415" y="90" width="745" height="640" as="geometry" />
+        <mxCell id="4" value="GCP" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#F8FAFE;strokeColor=#4285F4;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="25" y="180" width="235" height="245" as="geometry" />
         </mxCell>
-        <mxCell id="public" value="퍼블릭 서브넷" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=20;fontColor=#183a58;fillColor=#f1f5fa;strokeColor=#ccd9e1;verticalAlign=top;align=left;spacingTop=12;spacingLeft=20;" vertex="1" parent="1">
-          <mxGeometry x="445" y="157" width="685" height="342" as="geometry" />
+        <mxCell id="5" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=cloud;fillColor=#FFFFFF;strokeColor=#4285F4;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="103" y="245" width="70" height="48" as="geometry" />
         </mxCell>
-        <mxCell id="private" value="프라이빗 서브넷" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=20;fontColor=#177b75;fillColor=#eef7f5;strokeColor=#ccd9e1;verticalAlign=top;align=left;spacingTop=12;spacingLeft=20;" vertex="1" parent="1">
-          <mxGeometry x="445" y="535" width="685" height="152" as="geometry" />
+        <mxCell id="6" value="데이터 수집 서비스&#10;컨테이너 실행 환경" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=19;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="45" y="310" width="195" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="lb" value="로드밸런서&lt;br&gt;대상 그룹 전환" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=20;fontColor=#183a58;fillColor=#ffffff;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="475" y="246" width="210" height="82" as="geometry" />
+        <mxCell id="7" value="AWS Cloud" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=none;strokeColor=#232F3E;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;spacingLeft=42;" vertex="1" parent="1">
+          <mxGeometry x="310" y="65" width="865" height="630" as="geometry" />
         </mxCell>
-        <mxCell id="blue" value="EC2 · 기존 버전&lt;br&gt;백엔드 컨테이너" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#183a58;fillColor=#eaf1f9;strokeColor=#9eb5cd;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="765" y="220" width="315" height="106" as="geometry" />
+        <mxCell id="8" value="VPC" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=none;strokeColor=#8C4FFF;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc2;spacingLeft=42;" vertex="1" parent="1">
+          <mxGeometry x="335" y="120" width="815" height="550" as="geometry" />
         </mxCell>
-        <mxCell id="green" value="EC2 · 새 버전&lt;br&gt;백엔드 컨테이너" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#177b75;fillColor=#eef7f5;strokeColor=#8fbbb4;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="765" y="363" width="315" height="106" as="geometry" />
+        <mxCell id="9" value="Public subnet" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#F9FBF5;strokeColor=#7AA116;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;spacingLeft=42;" vertex="1" parent="1">
+          <mxGeometry x="355" y="180" width="770" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="rds" value="RDS" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#177b75;fillColor=#fff;strokeColor=#94b6b0;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="765" y="593" width="315" height="64" as="geometry" />
+        <mxCell id="10" value="Private subnet" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#F2FAFA;strokeColor=#00A4A6;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;spacingLeft=42;" vertex="1" parent="1">
+          <mxGeometry x="355" y="530" width="770" height="115" as="geometry" />
         </mxCell>
-        <mxCell id="client" value="서비스 요청" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#183a58;fillColor=#ffffff;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="55" y="42" width="255" height="76" as="geometry" />
+        <mxCell id="11" value="Load Balancer" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="322" y="350" width="214" height="29" as="geometry" />
         </mxCell>
-        <mxCell id="request" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#183a58;dashed=0;" edge="1" parent="1">
+        <mxCell id="12" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fillColor=#8C4FFF;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="397" y="278" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=none;strokeColor=#AAB7B8;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="545" y="217" width="555" height="227" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="백엔드 서비스" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="735" y="183" width="345" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="337" width="214" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="615" y="265" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="Blue EC2 · 기존 버전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=17;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="238" width="225" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="백엔드 컨테이너" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#D86613;strokeWidth=1.4;fontSize=17;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="565" y="373" width="205" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="820" y="337" width="214" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="895" y="265" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="Green EC2 · 새 버전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=17;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="825" y="238" width="225" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="백엔드 컨테이너" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#D86613;strokeWidth=1.4;fontSize=17;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="845" y="373" width="205" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="23" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#147EBA;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="182" y="118" as="sourcePoint" />
-            <mxPoint x="475" y="287" as="targetPoint" />
+            <mxPoint x="461" y="296" as="sourcePoint" />
+            <mxPoint x="605" y="296" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="24" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#248814;strokeWidth=1.7;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="461" y="315" as="sourcePoint" />
+            <mxPoint x="885" y="296" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="182" y="150" />
-              <mxPoint x="385" y="150" />
-              <mxPoint x="385" y="287" />
+              <mxPoint x="505" y="315" />
+              <mxPoint x="505" y="352" />
+              <mxPoint x="829" y="352" />
+              <mxPoint x="829" y="296" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="gRPC" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#177b75;dashed=0;" edge="1" parent="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="310" y="332" as="sourcePoint" />
-            <mxPoint x="415" y="332" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="25" value="대상 그룹 전환" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="365" y="399" width="160" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="gRPC-label" value="gRPC" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=17;fontColor=#177b75;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="324" y="284" width="81" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="blue-route" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#183a58;dashed=0;" edge="1" parent="1">
+        <mxCell id="26" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=1;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="685" y="273" as="sourcePoint" />
-            <mxPoint x="765" y="273" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="green-route" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#177b75;dashed=1;" edge="1" parent="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="685" y="299" as="sourcePoint" />
-            <mxPoint x="765" y="416" as="targetPoint" />
+            <mxPoint x="240" y="390" as="sourcePoint" />
+            <mxPoint x="800" y="444" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="722" y="299" />
-              <mxPoint x="722" y="416" />
+              <mxPoint x="280" y="390" />
+              <mxPoint x="280" y="482" />
+              <mxPoint x="800" y="482" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="blue-db" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#183a58;dashed=0;" edge="1" parent="1">
+        <mxCell id="27" value="gRPC · 서비스 간 논리적 통신" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#545B64;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="365" y="489" width="310" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="Amazon RDS" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="880" y="603" width="205" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.rds;fillColor=#C925D1;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="955" y="540" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="30" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1080" y="273" as="sourcePoint" />
-            <mxPoint x="1080" y="610" as="targetPoint" />
+            <mxPoint x="684" y="418" as="sourcePoint" />
+            <mxPoint x="945" y="567" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1102" y="273" />
-              <mxPoint x="1102" y="610" />
+              <mxPoint x="684" y="567" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="green-db" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#177b75;dashed=0;" edge="1" parent="1">
+        <mxCell id="31" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="922" y="469" as="sourcePoint" />
-            <mxPoint x="922" y="593" as="targetPoint" />
+            <mxPoint x="967" y="418" as="sourcePoint" />
+            <mxPoint x="1021" y="567" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1039" y="418" />
+              <mxPoint x="1039" y="567" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="logical" value="gRPC는 서비스 간&lt;br&gt;논리적 통신 관계입니다." style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=18;fontColor=#647b8b;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="35" y="474" width="295" height="80" as="geometry" />
+        <mxCell id="32" value="애플리케이션 데이터 저장" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=17;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="410" y="590" width="255" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="foot" value="서로 다른 EC2에서 두 버전을 실행하며 로드밸런서의 대상 그룹과 라우팅을 전환합니다." style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=19;fontColor=#647b8b;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="40" y="740" width="1120" height="30" as="geometry" />
+        <mxCell id="33" value="수집 서비스와 백엔드의 독립 배포  /  EC2별 기존 버전과 새 버전 운영" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="708" width="1140" height="35" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="bluegreen-deployment" name="CI/CD와 블루그린 트래픽 전환">
-    <mxGraphModel dx="1200" dy="690" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="690" math="0" shadow="0">
+  <diagram name="CI/CD 및 블루그린 배포" id="CI/CD 및 블루그린 배포">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1200" pageHeight="760" background="#FFFFFF">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="컨테이너 빌드 자동화와 새 버전 배포" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=25;fontColor=#183a58;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="30" y="12" width="1140" height="50" as="geometry" />
+        <mxCell id="2" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=none;strokeWidth=1.4;fontSize=18;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="1200" height="760" as="geometry" />
         </mxCell>
-        <mxCell id="git" value="GitHub&lt;br&gt;코드 변경" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#183a58;fillColor=#ffffff;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="50" y="112" width="250" height="90" as="geometry" />
+        <mxCell id="3" value="CI/CD 파이프라인 및 블루그린 배포" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=25;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="25" y="10" width="1150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="actions" value="GitHub Actions&lt;br&gt;애플리케이션 빌드" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#183a58;fillColor=#eef3f9;strokeColor=#a6bace;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="455" y="112" width="275" height="90" as="geometry" />
+        <mxCell id="4" value="GitHub&#10;코드 변경" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#545B64;strokeWidth=1.4;fontSize=21;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="95" width="230" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="new-version" value="새 버전 컨테이너&lt;br&gt;별도 EC2에 배포" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=22;fontColor=#177b75;fillColor=#eef7f5;strokeColor=#8fbbb4;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="890" y="112" width="260" height="90" as="geometry" />
+        <mxCell id="5" value="GitHub Actions&#10;애플리케이션 빌드" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#545B64;strokeWidth=1.4;fontSize=21;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="95" width="250" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="git-build" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#183a58;dashed=0;" edge="1" parent="1">
+        <mxCell id="6" value="새 버전 컨테이너 배포" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="915" y="163" width="216" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="990" y="89" width="66" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="8" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="300" y="157" as="sourcePoint" />
-            <mxPoint x="455" y="157" as="targetPoint" />
+            <mxPoint x="270" y="136" as="sourcePoint" />
+            <mxPoint x="470" y="136" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="build-deploy" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#177b75;dashed=0;" edge="1" parent="1">
+        <mxCell id="9" value="파이프라인 실행" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#545B64;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="98" width="180" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="10" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#545B64;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="730" y="157" as="sourcePoint" />
-            <mxPoint x="890" y="157" as="targetPoint" />
+            <mxPoint x="720" y="136" as="sourcePoint" />
+            <mxPoint x="980" y="136" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="switch-title" value="로드밸런서 대상 그룹과 라우팅 전환" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=23;fontColor=#183a58;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="30" y="240" width="1140" height="45" as="geometry" />
+        <mxCell id="11" value="별도 EC2 배포" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#545B64;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="755" y="98" width="190" height="28" as="geometry" />
         </mxCell>
-        <mxCell id="before-frame" value="전환 전 · 기존 버전으로 요청 전달" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=19;fontColor=#183a58;fillColor=#f6f8fb;strokeColor=#ccd9e1;verticalAlign=top;align=left;spacingTop=12;spacingLeft=20;" vertex="1" parent="1">
-          <mxGeometry x="30" y="310" width="540" height="305" as="geometry" />
+        <mxCell id="12" value="전환 전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#FFFFFF;strokeColor=#AAB7B8;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="25" y="258" width="550" height="420" as="geometry" />
         </mxCell>
-        <mxCell id="after-frame" value="전환 후 · 새 버전으로 요청 전달" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=19;fontColor=#177b75;fillColor=#f1f8f6;strokeColor=#ccd9e1;verticalAlign=top;align=left;spacingTop=12;spacingLeft=20;" vertex="1" parent="1">
-          <mxGeometry x="630" y="310" width="540" height="305" as="geometry" />
+        <mxCell id="13" value="Load Balancer" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="-5" y="523" width="215" height="29" as="geometry" />
         </mxCell>
-        <mxCell id="before-lb" value="로드밸런서" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=18;fontColor=#183a58;fillColor=#ffffff;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="60" y="430" width="160" height="70" as="geometry" />
+        <mxCell id="14" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fillColor=#8C4FFF;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="70" y="450" width="65" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="before-blue" value="EC2 · 기존 버전&lt;br&gt;백엔드 컨테이너" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=18;fontColor=#183a58;fillColor=#eaf1f9;strokeColor=#9eb5cd;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="325" y="380" width="210" height="75" as="geometry" />
+        <mxCell id="15" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="324" y="415" width="212" height="29" as="geometry" />
         </mxCell>
-        <mxCell id="before-green" value="EC2 · 새 버전&lt;br&gt;백엔드 컨테이너" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=18;fontColor=#177b75;fillColor=#eef7f5;strokeColor=#8fbbb4;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="325" y="510" width="210" height="75" as="geometry" />
+        <mxCell id="16" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="399" y="345" width="62" height="62" as="geometry" />
         </mxCell>
-        <mxCell id="before-traffic" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#183a58;dashed=0;" edge="1" parent="1">
+        <mxCell id="17" value="Blue · 기존 버전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="348" y="305" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="백엔드 컨테이너" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#D86613;strokeWidth=1.4;fontSize=16;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="365" y="443" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="324" y="605" width="212" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="399" y="535" width="62" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="Green · 새 버전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="348" y="495" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="백엔드 컨테이너" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#D86613;strokeWidth=1.4;fontSize=16;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="365" y="633" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="23" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#147EBA;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="220" y="465" as="sourcePoint" />
-            <mxPoint x="325" y="417" as="targetPoint" />
+            <mxPoint x="135" y="479" as="sourcePoint" />
+            <mxPoint x="389" y="376" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="268" y="465" />
-              <mxPoint x="268" y="417" />
+              <mxPoint x="260" y="479" />
+              <mxPoint x="260" y="376" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="after-lb" value="로드밸런서" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=18;fontColor=#183a58;fillColor=#ffffff;strokeColor=#ccd9e1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="660" y="430" width="160" height="70" as="geometry" />
+        <mxCell id="24" value="서비스 요청" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="152" y="422" width="190" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="after-blue" value="EC2 · 기존 버전&lt;br&gt;백엔드 컨테이너" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=18;fontColor=#183a58;fillColor=#eaf1f9;strokeColor=#9eb5cd;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="925" y="380" width="210" height="75" as="geometry" />
+        <mxCell id="25" value="전환 후" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;fillColor=#FFFFFF;strokeColor=#AAB7B8;strokeWidth=1.4;verticalAlign=top;align=left;spacingTop=10;spacingLeft=12;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="625" y="258" width="550" height="420" as="geometry" />
         </mxCell>
-        <mxCell id="after-green" value="EC2 · 새 버전&lt;br&gt;백엔드 컨테이너" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=18;fontColor=#177b75;fillColor=#eef7f5;strokeColor=#8fbbb4;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="925" y="510" width="210" height="75" as="geometry" />
+        <mxCell id="26" value="Load Balancer" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="595" y="523" width="215" height="29" as="geometry" />
         </mxCell>
-        <mxCell id="after-traffic" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#177b75;dashed=0;" edge="1" parent="1">
+        <mxCell id="27" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fillColor=#8C4FFF;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="670" y="450" width="65" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="924" y="415" width="212" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="999" y="345" width="62" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="Blue · 기존 버전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="948" y="305" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="백엔드 컨테이너" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#D86613;strokeWidth=1.4;fontSize=16;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="965" y="443" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="Amazon EC2" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="924" y="605" width="212" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=#FFFFFF;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=9;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="999" y="535" width="62" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="Green · 새 버전" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="948" y="495" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="백엔드 컨테이너" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=#D86613;strokeWidth=1.4;fontSize=16;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="965" y="633" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="36" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#248814;strokeWidth=1.7;dashed=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="820" y="465" as="sourcePoint" />
-            <mxPoint x="925" y="547" as="targetPoint" />
+            <mxPoint x="735" y="479" as="sourcePoint" />
+            <mxPoint x="989" y="566" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="868" y="465" />
-              <mxPoint x="868" y="547" />
+              <mxPoint x="860" y="479" />
+              <mxPoint x="860" y="566" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="foot" value="빌드부터 새 버전 배포까지 자동화해 배포 시간을 30분에서 10분으로 줄였습니다." style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontFamily=Helvetica;fontSize=20;fontColor=#647b8b;text;fillColor=none;strokeColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="30" y="635" width="1140" height="38" as="geometry" />
+        <mxCell id="37" value="서비스 요청" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="752" y="422" width="190" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="38" value="기존 버전 운영 중 새 버전 배포 → 로드밸런서 대상 그룹 및 라우팅 전환" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=19;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="25" y="710" width="1150" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
