@@ -8,7 +8,7 @@
         <mxCell id="2" value="" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;rounded=0;fillColor=#FFFFFF;strokeColor=none;strokeWidth=1.4;fontSize=18;dashed=0;" vertex="1" parent="1">
           <mxGeometry x="0" y="0" width="1600" height="1360" as="geometry" />
         </mxCell>
-        <mxCell id="3" value="실시간 결제 시스템 · 네트워크 구성 개선안" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=29;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="3" value="클라우드 아키텍처" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=29;fontColor=#232F3E;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="30" y="18" width="1520" height="45" as="geometry" />
         </mxCell>
         <mxCell id="4" value="프라이빗 애플리케이션 배치 / 2개 가용영역 / RDS Multi-AZ" style="html=0;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#232F3E;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=21;fontColor=#232F3E;fontStyle=0;" vertex="1" parent="1">

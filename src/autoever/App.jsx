@@ -145,7 +145,7 @@ export default function App() {
             </ul>
           </Paragraph>
         </div>
-        <Diagram file="operator-flow.svg" title="Kubernetes Operator 아키텍처" caption="스터디 구현을 바탕으로 재구성했습니다. Operator는 API 서버를 통해 CR과 Deployment를 관리하고, 배포 상태를 Slack으로 전달합니다." onOpen={setPreview} />
+        <Diagram file="operator-flow.svg" title="Kubernetes Operator 아키텍처" caption="Operator는 API 서버를 통해 CR과 Deployment를 관리하고, 배포 상태를 Slack으로 전달합니다." onOpen={setPreview} />
       </div></section>
 
       <section className="ae-section ae-wrap" id="delivery">
