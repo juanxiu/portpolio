@@ -22,7 +22,10 @@ function SectionHeading({ number, eyebrow, title, children }) {
 function Diagram({ file, title, caption, onOpen }) {
   const src = asset(`${diagrams}${file}`);
   const [width, height] = diagramSizes[file];
-  return <figure className="ae-figure"><button className="ae-diagram-button" onClick={() => onOpen({ src, title, caption })} aria-label={`${title} 크게 보기`}><img src={src} width={width} height={height} alt={title} loading="lazy" decoding="async" /><span className="ae-zoom"><Maximize2 size={14} aria-hidden="true" /> 크게 보기</span></button><figcaption><strong>{title}</strong><span>{caption}</span></figcaption></figure>;
+  const previewHeight = file === 'runtime-architecture.svg' ? 480 : 500;
+  // Include the frame's padding and border while preserving the SVG's aspect ratio.
+  const previewWidth = Math.round(width / height * previewHeight + 26);
+  return <figure className="ae-figure ae-architecture" style={{ '--ae-diagram-max-width': `${previewWidth}px` }}><button className="ae-diagram-button" onClick={() => onOpen({ src, title, caption })} aria-label={`${title} 크게 보기`}><img src={src} width={width} height={height} alt={title} loading="lazy" decoding="async" /><span className="ae-zoom"><Maximize2 size={14} aria-hidden="true" /> 크게 보기</span></button><figcaption><strong>{title}</strong><span>{caption}</span></figcaption></figure>;
 }
 
 function EvidenceImage({ path, width, height, title, caption, onOpen }) {

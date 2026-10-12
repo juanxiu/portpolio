@@ -18,6 +18,7 @@
 .ae-intern-prose{max-width:850px}.ae-story strong,.ae-project-outcome strong{font-weight:700;color:var(--ae-navy)}
 .ae-operator-copy{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-bottom:34px}
 .ae-test-evidence{margin-top:34px}.ae-test-evidence>h3{font-size:19px;margin-bottom:17px}
+.ae-architecture{width:100%;max-width:var(--ae-diagram-max-width);margin-inline:auto}
 .ae-evidence-image .ae-diagram-button{padding:0;overflow:hidden}.ae-evidence-image img{object-fit:contain}
 .ae-details-body>.ae-evidence-image{max-width:800px;margin:28px auto 0}
 .ae-musai-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:start}
