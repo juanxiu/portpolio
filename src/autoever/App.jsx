@@ -25,7 +25,7 @@ function Diagram({ file, title, caption, onOpen }) {
   const previewHeight = file === 'runtime-architecture.svg' ? 480 : 500;
   // Include the frame's padding and border while preserving the SVG's aspect ratio.
   const previewWidth = Math.round(width / height * previewHeight + 26);
-  return <figure className="ae-figure ae-architecture" style={{ '--ae-diagram-max-width': `${previewWidth}px` }}><button className="ae-diagram-button" onClick={() => onOpen({ src, title, caption })} aria-label={`${title} 크게 보기`}><img src={src} width={width} height={height} alt={title} loading="lazy" decoding="async" /><span className="ae-zoom"><Maximize2 size={14} aria-hidden="true" /> 크게 보기</span></button><figcaption><strong>{title}</strong><span>{caption}</span></figcaption></figure>;
+  return <figure className="ae-figure ae-architecture" style={{ '--ae-diagram-max-width': `${previewWidth}px` }}><button className="ae-diagram-button" onClick={() => onOpen({ src, title, caption })} aria-label={`${title} 크게 보기`}><img src={src} width={width} height={height} alt={title} loading="lazy" decoding="async" /><span className="ae-zoom"><Maximize2 size={14} aria-hidden="true" /> 크게 보기</span></button>{caption && <figcaption><strong>{title}</strong><span>{caption}</span></figcaption>}</figure>;
 }
 
 function EvidenceImage({ path, width, height, title, caption, onOpen }) {
@@ -167,11 +167,7 @@ export default function App() {
             </ul>
           </Paragraph>
         </div>
-        <div className="ae-network-proposal">
-          <h3>네트워크 구성 개선안</h3>
-          <p>실제 구현의 퍼블릭 EC2를 프라이빗 서브넷으로 옮기는 개선안입니다. 인터넷 요청은 로드밸런서로 받고, 애플리케이션의 외부 통신은 같은 가용영역의 NAT Gateway를 거치도록 구성했습니다. EC2와 RDS 사이의 내부 통신에는 NAT Gateway가 필요하지 않습니다.</p>
-        </div>
-        <Diagram file="runtime-architecture.svg" title="실시간 결제 시스템 네트워크 개선안" caption="EC2 가용영역 분산과 RDS Multi-AZ는 구현 경험입니다. 프라이빗 EC2, 가용영역별 NAT, 두 가용영역에 걸친 Blue·Green 배치와 ALB의 gRPC 경로는 추가로 설계한 개선안입니다." onOpen={setPreview} />
+        <Diagram file="runtime-architecture.svg" title="실시간 결제 시스템 네트워크 구성" onOpen={setPreview} />
         <div className="ae-bluegreen-copy">
           <h3>블루그린 배포 및 트래픽 전환</h3>
           <ul className="ae-bullets">
@@ -260,7 +256,7 @@ export default function App() {
     </main>
     <footer className="ae-footer ae-wrap"><div><strong>김연수 <span>Yeonsoo Kim</span></strong></div><p className="ae-footer-note">© 2026 Yeonsoo Kim. 개인 지원용 포트폴리오입니다.</p></footer>
     <dialog className="ae-lightbox" ref={dialogRef} onCancel={() => setPreview(null)} onClick={event => { if (event.target === event.currentTarget) setPreview(null); }} aria-labelledby="preview-title">
-      {preview && <div className="ae-lightbox-inner"><div className="ae-lightbox-header"><h2 id="preview-title">{preview.title}</h2><button autoFocus onClick={() => setPreview(null)} aria-label="이미지 확대 닫기"><X size={24} /></button></div><div className="ae-lightbox-scroll"><img src={preview.src} alt={preview.title} /></div><p>{preview.caption}</p></div>}
+      {preview && <div className="ae-lightbox-inner"><div className="ae-lightbox-header"><h2 id="preview-title">{preview.title}</h2><button autoFocus onClick={() => setPreview(null)} aria-label="이미지 확대 닫기"><X size={24} /></button></div><div className="ae-lightbox-scroll"><img src={preview.src} alt={preview.title} /></div>{preview.caption && <p>{preview.caption}</p>}</div>}
     </dialog>
   </div>;
 }

@@ -28,7 +28,6 @@
 
 /* Plain results and implementation notes. */
 .ae-profile-links{display:flex;flex-wrap:wrap;gap:12px 24px;margin:0 0 26px}.ae-hero .ae-role{margin-bottom:15px}
-.ae-network-proposal{margin:10px 0 22px;max-width:940px}.ae-network-proposal h3{font-size:19px;margin-bottom:10px}.ae-network-proposal p{font-size:15px;line-height:1.85;color:#46596a}
 .ae-credentials .ae-bullets{margin-top:13px;font-size:14px}
 .ae-hero h1{font-size:clamp(42px,5vw,62px);letter-spacing:-1.5px;margin:18px 0 10px;line-height:1.16}
 .ae-role{font-size:18px;margin:0 0 23px;color:var(--ae-navy);font-weight:600}
