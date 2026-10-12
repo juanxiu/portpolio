@@ -7,7 +7,7 @@ const diagrams = 'images/autoever/';
 const diagramSizes = {
   'lookup-paths.svg': [1001, 621],
   'operator-flow.svg': [1218, 811],
-  'runtime-architecture.svg': [1281, 991],
+  'runtime-architecture.svg': [1601, 1361],
   'bluegreen-deployment.svg': [1281, 921],
 };
 
@@ -74,8 +74,9 @@ export default function App() {
           <p className="ae-eyebrow">HYUNDAI AUTOEVER · 2026 PORTFOLIO</p>
           <h1>Yeonsoo Kim</h1>
           <p className="ae-role">플랫폼 엔지니어 · 김연수</p>
+          <div className="ae-profile-links" aria-label="공개 프로필"><External href={links.linkedin}>LinkedIn</External><External href={links.github}>GitHub</External><External href={links.blog}>기술 블로그</External></div>
           <p className="ae-lead">Kubernetes 운영 도구의 조회 성능을 개선하고, 배포 상태 점검과 컨테이너 배포를 자동화했습니다. 반복 작업을 줄이는 과정에서도 데이터의 최신성과 서비스 준비 상태를 함께 확인했습니다.</p>
-          <div className="ae-hero-actions"><a className="ae-button" href="#open-source">대표 사례 살펴보기<ArrowDown size={17} /></a><External href={links.github}>GitHub</External></div>
+          <div className="ae-hero-actions"><a className="ae-button" href="#open-source">대표 사례 살펴보기<ArrowDown size={17} /></a></div>
         </div>
         <aside className="ae-focus" aria-labelledby="focus-title"><p className="ae-eyebrow" id="focus-title">CURRENTLY FOCUSED ON</p>{focus.map((item, i) => <div className="ae-focus-item" key={item.title}><span className="ae-focus-number">0{i + 1}</span><div><h2>{item.title}</h2><p>{item.text}</p></div></div>)}</aside>
         </div>
@@ -86,7 +87,12 @@ export default function App() {
         <div className="ae-case-grid">
           <div className="ae-narrative">
             <Paragraph label="Application 조회 구조 분석"><p>Argo CD Agent에 기여하며 로컬 클러스터에서 Application 조회 경로를 분석했습니다. CRD로 정의된 리소스를 조회할 때마다 Kubernetes API 서버를 호출하고 있어, 일반 조회에 기존 로컬 메모리 캐시를 활용하도록 개선했습니다.</p></Paragraph>
-            <Paragraph label="조회 경로 분리"><p>캐시는 리소스 변경 사항을 반영하지만 실제 상태보다 늦게 갱신될 수 있습니다. 업데이트 과정에서 오래된 정보를 반복해서 읽으면 충돌을 재시도해도 해결되지 않을 수 있어, 업데이트용 조회는 API 서버를 직접 호출하도록 유지했습니다.</p><p>리뷰에서는 캐시의 공유 객체를 호출자가 변경할 위험도 확인했습니다. 원본을 보호하도록 복사본을 반환하고, 수정한 코드의 테스트와 리뷰를 거쳐 기여가 병합됐습니다.</p></Paragraph>
+            <Paragraph label="조회 경로 분리 및 데이터 보호"><ul className="ae-bullets">
+              <li>캐시가 실제 리소스 상태보다 늦게 갱신될 수 있어, 업데이트 재시도에서도 오래된 정보를 읽을 가능성 확인</li>
+              <li>일반 조회에는 캐시를 활용하고, 최신 정보가 필요한 업데이트용 조회는 API 서버 직접 호출 유지</li>
+              <li>호출자가 캐시의 공유 객체를 변경하지 않도록, 원본 대신 복사본을 반환해 데이터 보호</li>
+              <li>수정한 코드의 테스트와 리뷰를 거쳐 공식 프로젝트에 병합</li>
+            </ul></Paragraph>
 
             <div className="ae-evidence-links"><External href={prUrl(525)}>PR #525 · 변경 코드와 리뷰</External><External href="https://github.com/argoproj-labs/argocd-agent/actions/runs/18391317892">병합 시점의 CI 결과</External></div>
           </div>
@@ -136,17 +142,18 @@ export default function App() {
             </ul>
           </Paragraph>
         </div>
-        <Diagram file="operator-flow.svg" title="Kubernetes Operator 아키텍처" caption="스터디 구현을 바탕으로 재구성했습니다. Operator는 API 서버를 통해 CR과 Deployment를 관리하며, kubelet이 수행한 readiness probe의 결과는 리소스 상태에 반영됩니다." onOpen={setPreview} />
+        <Diagram file="operator-flow.svg" title="Kubernetes Operator 아키텍처" caption="스터디 구현을 바탕으로 재구성했습니다. Operator는 API 서버를 통해 CR과 Deployment를 관리하고, 배포 상태를 Slack으로 전달합니다." onOpen={setPreview} />
       </div></section>
 
       <section className="ae-section ae-wrap" id="delivery">
-        <SectionHeading number="03" eyebrow="CLOUD & DELIVERY" title="실시간 결제 시스템 — CI/CD 및 블루그린 배포">졸업프로젝트 · AWS와 GCP를 활용한 서비스 분리 및 독립 배포</SectionHeading>
+        <SectionHeading number="03" eyebrow="CLOUD & DELIVERY" title="실시간 결제 시스템 — CI/CD 및 블루그린 배포">졸업프로젝트 · 백엔드 개발 · Java / Spring Boot</SectionHeading>
         <div className="ae-delivery-intro">
           <Paragraph label="서비스 및 실행 환경">
             <ul className="ae-bullets">
               <li>GCP의 데이터 수집 서비스와 AWS의 백엔드를 분리하고 gRPC로 연결</li>
               <li>서비스별 Dockerfile과 Docker Compose로 의존성과 실행 설정 관리</li>
               <li>각 서비스의 독립 배포 구성, EC2는 퍼블릭 서브넷에 배치하고 RDS는 프라이빗 서브넷에 분리</li>
+              <li>EC2를 서로 다른 가용영역에 분산하고, RDS Multi-AZ로 Primary와 Standby 구성</li>
             </ul>
           </Paragraph>
           <Paragraph label="배포 자동화">
@@ -157,7 +164,11 @@ export default function App() {
             </ul>
           </Paragraph>
         </div>
-        <Diagram file="runtime-architecture.svg" title="실시간 결제 시스템 배포 아키텍처" caption="GCP 수집 서비스와 AWS 백엔드의 독립 배포 구성입니다. 두 서비스의 gRPC 연결은 논리적 통신 관계로 표시했습니다." onOpen={setPreview} />
+        <div className="ae-network-proposal">
+          <h3>네트워크 구성 개선안</h3>
+          <p>실제 구현의 퍼블릭 EC2를 프라이빗 서브넷으로 옮기는 개선안입니다. 인터넷 요청은 로드밸런서로 받고, 애플리케이션의 외부 통신은 같은 가용영역의 NAT Gateway를 거치도록 구성했습니다. EC2와 RDS 사이의 내부 통신에는 NAT Gateway가 필요하지 않습니다.</p>
+        </div>
+        <Diagram file="runtime-architecture.svg" title="실시간 결제 시스템 네트워크 개선안" caption="EC2 가용영역 분산과 RDS Multi-AZ는 구현 경험입니다. 프라이빗 EC2, 가용영역별 NAT, 두 가용영역에 걸친 Blue·Green 배치와 ALB의 gRPC 경로는 추가로 설계한 개선안입니다." onOpen={setPreview} />
         <div className="ae-bluegreen-copy">
           <h3>블루그린 배포 및 트래픽 전환</h3>
           <ul className="ae-bullets">
@@ -172,8 +183,15 @@ export default function App() {
 
       <section className="ae-section ae-section-tint" id="homelab"><div className="ae-wrap">
         <SectionHeading number="04" eyebrow="LINUX HOME LAB" title="Linux 홈서버 구축 및 모니터링">Linux 스터디와 홈서버 구축 · 구성에서 동작 확인까지</SectionHeading>
-        <div className="ae-home-grid"><Paragraph label="가상머신과 원격 접속 환경"><p>Linux 스터디에서 운영체제와 네트워크의 기초를 실습하고, Proxmox에서 가상머신과 Linux 운영체제를 설치했습니다. 네트워크를 연결한 뒤 Tailscale과 MagicDNS를 설정해 홈서버에 원격으로 접속하고 터미널에서 서버를 조작했습니다.</p></Paragraph><Paragraph label="CPU 사용률 기반 알림"><p>Linux에서 CPU 사용률을 의도적으로 높이는 스크립트를 실행했습니다. n8n이 실제 CPU 사용률을 읽고 기준을 넘으면 Slack으로 알리도록 구성한 뒤, 부하가 발생했을 때 알림이 도착하는지 확인했습니다.</p></Paragraph></div>
-        <ol className="ae-process" aria-label="홈서버 실습 과정"><li><span>01</span>Linux 가상머신 구성</li><li><span>02</span>원격 접속 확인</li><li><span>03</span>CPU 부하 발생</li><li><span>04</span>사용률 기반 알림 확인</li></ol>
+        <div className="ae-home-grid"><Paragraph label="가상머신과 원격 접속 환경"><ul className="ae-bullets">
+          <li>Linux 스터디에서 운영체제와 네트워크의 기초 실습</li>
+          <li>Proxmox에서 가상머신을 구성하고 Linux 설치 및 네트워크 연결</li>
+          <li>Tailscale과 MagicDNS를 설정해 홈서버에 원격 접속하고 터미널로 서버 조작</li>
+        </ul></Paragraph><Paragraph label="CPU 사용률 기반 알림"><ul className="ae-bullets">
+          <li>Linux에서 CPU 사용률을 의도적으로 높이는 스크립트를 실행해 부하 발생</li>
+          <li>n8n이 실제 CPU 사용률을 읽고 기준을 넘으면 Slack으로 알리도록 자동화</li>
+          <li>부하 발생 시 사용률 변화와 Slack 알림 수신을 확인해 동작 검증</li>
+        </ul></Paragraph></div>
       </div></section>
 
       <section className="ae-section ae-wrap" id="experience">
@@ -194,10 +212,17 @@ export default function App() {
         <div className="ae-musai-grid">
           <div className="ae-narrative">
             <Paragraph label="예약 및 재고 동시성 제어">
-              <p>악기 대여 예약과 점주의 재고 관리 기능을 개발했습니다. 같은 악기에 예약이 동시에 들어와도 재고 수량이 어긋나지 않도록, 예약 저장과 재고 차감을 하나의 트랜잭션으로 묶고 비관적 락을 적용했습니다.</p>
+              <ul className="ae-bullets">
+                <li>악기 대여 예약과 점주의 재고 관리 기능 개발</li>
+                <li>예약 저장과 재고 차감을 하나의 트랜잭션으로 묶어 함께 처리</li>
+                <li>같은 악기에 예약이 동시에 들어올 때 재고 수량이 어긋나지 않도록 비관적 잠금 적용</li>
+              </ul>
             </Paragraph>
             <Paragraph label="서버 오류 모니터링">
-              <p>운영 중 발생하는 오류를 확인할 수 있도록 서버 예외를 Sentry와 연동하고 알림을 설정했습니다. 오류가 발생한 시점과 내용을 확인할 수 있는 모니터링 환경을 구성했습니다.</p>
+              <ul className="ae-bullets">
+                <li>서버 예외를 Sentry와 연동하고 오류 발생 알림 설정</li>
+                <li>오류가 발생한 시점과 내용을 확인할 수 있는 모니터링 환경 구성</li>
+              </ul>
             </Paragraph>
             <p className="ae-project-outcome">MUSAI 프로젝트로 <strong>세아해암학술장학재단 커리어챌린지 장학금 300만 원을 받았습니다.</strong></p>
             <External href="https://github.com/TEAM-PEDALGENIE/PedalGenie-Back">MUSAI 백엔드 저장소</External>
@@ -210,7 +235,6 @@ export default function App() {
         <SectionHeading number="07" eyebrow="RESEARCH" title="LLM의 KV 캐시 압축에 따른 성능 저하 개선 연구">이화여자대학교 AI컴퓨팅 플랫폼 연구실 · 학부연구생</SectionHeading>
         <p className="ae-research-goal">LLM의 이전 계산 결과를 저장하는 KV 캐시를 줄이면서 답변 품질 저하를 완화하는 방법을 연구했습니다. 캐시에서 제외한 정보가 답변 생성에 얼마나 기여했는지 일부 관측값으로 추정하고, 그 값을 계산에 다시 반영하는 접근을 실험했습니다.</p>
         <div className="ae-research-grid"><Paragraph label="관측값 편향 분석"><p>반복 실험에서 관측값이 한쪽으로 치우쳐 초기 추정 방식의 오차가 커지는 현상을 발견했습니다. 전체 계산값과 추정값의 차이를 단계별로 비교해 오차가 누적되는 구간과 표본이 대표성을 잃는 조건을 확인했습니다.</p></Paragraph><Paragraph label="추정 방식 재설계 및 검증"><p>치우친 관측값을 반영하도록 추정 방식을 다시 설계했습니다. 입력과 압축 조건을 고정한 동일 벤치마크에서 검증해 기존 방식보다 낮은 오차를 확인하고, 관측 표본 수에 따른 정확도와 추가 메모리 사용량을 함께 비교했습니다.</p></Paragraph></div>
-        <p className="ae-research-takeaway">성능 수치만 비교하지 않고 오차의 원인을 좁혀가며, 자원 사용량과 결과의 품질을 함께 검증했습니다.</p>
       </section>
 
       <section className="ae-section ae-section-tint" id="about"><div className="ae-wrap">
@@ -218,13 +242,20 @@ export default function App() {
         <div className="ae-background-grid">
           <div><h3>기술 스택</h3><dl className="ae-skills">{skills.map(skill => <div key={skill.label}><dt>{skill.label}</dt><dd>{skill.technologies}</dd></div>)}</dl></div>
           <div className="ae-credentials">
-            <article><span className="ae-small-label">COMMUNITY</span><h3>클라우드·AI 연합동아리 공동 회장</h3><p>10개 대학, 200명 이상이 참여하는 연합동아리의 초기 공동 회장을 맡았습니다. 커뮤니티 지원으로 무료 워크숍을 열고, 사전 설문을 바탕으로 실습 난이도와 멘토링을 조정했습니다. 매 행사에 100명 이상이 참여했으며, 차기 회장단에 운영 경험을 전수해 후속 활동을 지원했습니다.</p></article>
-            <article><span className="ae-small-label">EDUCATION</span><h3>이화여자대학교</h3><p>컴퓨터공학 전공</p></article>
+            <article><span className="ae-small-label">COMMUNITY</span><h3>AWS Cloud Club</h3><p>초기 공동 회장</p><ul className="ae-bullets">
+              <li>10개 대학, 200명 이상 규모의 연합동아리 운영</li>
+              <li>커뮤니티에서 AWS 크레딧과 장소 지원을 확보해 무료 워크숍 개최</li>
+              <li>사전 설문을 반영해 실습 난이도를 조절하고 멘토링 매칭</li>
+              <li>클라우드 및 AI 관련 발표 진행과 발표 세션 기획</li>
+              <li>매 행사 <strong>100명 이상 참여</strong>, 피드백을 반영한 후속 행사 운영</li>
+              <li>차기 회장단 온보딩으로 <strong>3년째 이어지는 동아리 운영</strong> 지원</li>
+            </ul></article>
+            <article><span className="ae-small-label">EDUCATION</span><h3>이화여자대학교</h3><p>컴퓨터공학 전공 · <strong>GPA 3.97/4.5</strong></p></article>
           </div>
         </div>
       </div></section>
     </main>
-    <footer className="ae-footer ae-wrap"><div><strong>김연수 <span>Yeonsoo Kim</span></strong><p>컨테이너 플랫폼 구축 및 운영 포트폴리오</p></div><div className="ae-footer-links"><External href={links.github}>GitHub</External><External href={links.linkedin}>LinkedIn</External><External href={links.blog}>기술 블로그</External></div><p className="ae-footer-note">© 2026 Yeonsoo Kim. 개인 지원용 포트폴리오입니다.</p></footer>
+    <footer className="ae-footer ae-wrap"><div><strong>김연수 <span>Yeonsoo Kim</span></strong></div><p className="ae-footer-note">© 2026 Yeonsoo Kim. 개인 지원용 포트폴리오입니다.</p></footer>
     <dialog className="ae-lightbox" ref={dialogRef} onCancel={() => setPreview(null)} onClick={event => { if (event.target === event.currentTarget) setPreview(null); }} aria-labelledby="preview-title">
       {preview && <div className="ae-lightbox-inner"><div className="ae-lightbox-header"><h2 id="preview-title">{preview.title}</h2><button autoFocus onClick={() => setPreview(null)} aria-label="이미지 확대 닫기"><X size={24} /></button></div><div className="ae-lightbox-scroll"><img src={preview.src} alt={preview.title} /></div><p>{preview.caption}</p></div>}
     </dialog>

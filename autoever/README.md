@@ -3,7 +3,7 @@
 - 제출 주소: https://juanxiu.github.io/portpolio/autoever/
 - 지원 분야: 2026년 4분기 Platform Engineer · 컨테이너 플랫폼 구축 및 운영
 - 작성 기준: 제출용 자기소개서 v3, 경험 정리, 공개 PR 검토, 2026-10-12 사용자 추가 확인
-- 추가 확인: GCP 수집 서비스 / AWS 백엔드 / 서로 다른 EC2의 블루그린 배포
+- 추가 확인: GCP 수집 서비스 / AWS 백엔드 / 서로 다른 EC2의 블루그린 배포 / EC2 가용영역 분산 / RDS Multi-AZ
 - 졸업프로젝트는 Safe Path와 다른 프로젝트다. 사용자가 주제를 실시간 결제 시스템으로 확인했다.
 
 ## 로컬 실행과 빌드
@@ -42,7 +42,7 @@ npm run preview
 
 ## 아키텍처 편집
 
-- `public/diagrams/autoever-deployment.drawio`: 서비스 실행 구조와 CI/CD·블루그린 전환 2페이지
+- `public/diagrams/autoever-deployment.drawio`: 네트워크 구성 개선안과 실제 CI/CD·블루그린 전환 2페이지
 - `public/diagrams/autoever-kubernetes.drawio`: 조회 경로 분리와 Operator 구조 2페이지
 - `public/images/autoever/`: 웹용 SVG 4장
 - `scripts/create-autoever-diagrams.py`: draw.io Desktop을 호출해 원본에서 웹용 SVG를 내보내는 도구
@@ -53,7 +53,7 @@ python3 scripts/create-autoever-diagrams.py
 
 draw.io 원본이 편집 기준이다. AWS의 EC2·RDS·Elastic Load Balancing 및 그룹 도형과 Kubernetes 리소스 아이콘은 draw.io 내장 라이브러리를 사용한다. draw.io에서 원본을 수정한 뒤 위 명령으로 SVG를 내보낸다. 스크립트는 원본을 재생성하거나 덮어쓰지 않는다. draw.io Desktop 27 이상이 필요하며, 설치 위치가 다르면 DRAWIO_BIN 환경 변수로 실행 파일을 지정한다.
 
-그림은 본인 설명과 공개 PR을 바탕으로 재구성했다. Operator의 직접 구현과 Kubernetes 기본 리소스 관리 관계는 선과 영역으로 구분한다. GCP 실행 제품이나 로드밸런서 종류, 자동 롤백 등 미확인 구성은 추가하지 않았다.
+Operator와 조회 경로, CI/CD 그림은 본인 설명과 공개 PR을 바탕으로 재구성했다. 네트워크 그림은 별도로 제안한 개선안이며 아래의 실제 구성과 구분한다. GCP 실행 제품, 아티팩트 저장소, 자동 롤백 등 미확인 구성은 추가하지 않았다.
 
 ## 검증 기준
 
@@ -82,9 +82,35 @@ draw.io 원본이 편집 기준이다. AWS의 EC2·RDS·Elastic Load Balancing �
 - 한국IT비즈니스진흥협회장상은 오픈소스 기여 영역에만 기록한다. 기존 확인된 정식 상명을 유지한다.
 - Operator와 실시간 결제 시스템은 구현 목적, 구성, 검증 결과를 불렛으로 정리한다.
 - 사용자 추가 확인: 실시간 결제 시스템에서 GitHub Actions와 AWS CodeBuild·CodeDeploy를 함께 사용했다. 그림은 해당 도구의 CI/CD 관계를 표현하며, 아티팩트 저장소·세부 호출 명령·자동 롤백은 추가하지 않는다.
-- Blue와 Green은 별도 EC2 환경이며, 공통 RDS를 사용한다. 참고 그림의 RDS 복제나 Multi-AZ 구성을 본인 경험으로 옮기지 않는다.
+- Blue와 Green은 별도 EC2 환경이며, 공통 RDS를 사용한다. 이후 사용자 답변에서 EC2 가용영역 분산과 RDS Multi-AZ 사용을 확인했다. 구체적인 장애 복구 시험이나 실측 복구 시간은 확인되지 않았다.
 - draw.io의 EC2·RDS·Load Balancing·CodeBuild·CodeDeploy 아이콘을 사용한다. 기존 버전/새 버전 대신 Blue Environment, Green Environment, Payment API v1/v2로 환경을 구분한다.
 - 원본 파일과 내보내기 도구는 저장소에 보존하되, 제출 화면의 draw.io 다운로드 링크와 편집 안내는 삭제한다.
 - 하단은 기술 스택, 커뮤니티 활동, 대학과 전공으로 구성한다. 자격증 표시는 제외했다.
 
 기술 관계 참고: [GitHub Actions 워크플로](https://docs.github.com/en/actions/concepts/workflows-and-actions/workflows), [CodeDeploy와 Load Balancing](https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-elastic-load-balancing.html).
+
+
+## 프로필·본문 및 네트워크 개선안 반영
+
+- LinkedIn·GitHub·기술블로그는 이름과 역할 바로 아래에 배치한다. 하단 중복 링크와 직무 포트폴리오 문구는 제거한다.
+- AWS Cloud Club 초기 공동 회장 경험은 무료 워크숍, 발표, 설문을 반영한 기획, 후속 운영 지원으로 정리한다. 학력에 GPA 3.97/4.5를 표시한다.
+- OSS 조회 경로, Linux 홈서버와 MUSAI는 구현과 확인 결과를 불렛으로 정리한다. MUSAI만 보조 백엔드 사례로 유지하며 Hedge는 다음 범위에서 검토한다.
+- Operator 그림에는 Slack 알림 아이콘을 넣고 직접 구현 영역 및 kubelet 설명 문구를 제거한다. 아이콘 출처: https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png
+
+### 실제 구현과 개선안의 구분
+
+| 구분 | 내용 |
+| --- | --- |
+| 본인 확인 구현 | GCP 수집 서비스와 AWS 백엔드의 gRPC 연동, 독립 배포, 퍼블릭 EC2와 프라이빗 RDS, EC2 가용영역 분산과 RDS Multi-AZ, GitHub Actions·CodeBuild·CodeDeploy, 블루그린 전환 |
+| 네트워크 개선안 | 프라이빗 EC2, 가용영역별 NAT Gateway, Blue와 Green 각각의 2개 AZ 배치, 인터넷 연결 ALB의 HTTPS 리스너 및 gRPC 대상 그룹 |
+| 미확인·성과 미주장 | 자동 롤백, 장애 복구 시험, 가용성 수치, 구체적인 서버 대수와 인스턴스 사양, GCP 실행 제품 |
+
+네트워크 그림은 CI/CD 요소를 제거하고 VPC와 서브넷, 트래픽 경로를 보여준다. CI/CD 그림은 네트워크 상세를 반복하지 않고 코드 변경부터 새 환경 배포와 로드밸런서 대상 전환까지 보여준다. 두 ALB node는 서로 다른 로드밸런서가 아니라 하나의 ALB가 사용하는 각 AZ의 노드를 의미한다.
+
+프라이빗 RDS 접근에는 NAT 또는 IGW가 필요하지 않다. 앱과 DB 사이에는 VPC 내부 경로를 사용한다. NAT는 프라이빗 애플리케이션의 외부 통신을 위한 제안이며 AZ별 배치는 가용성과 비용의 균형을 검토할 대상이다. DB 서브넷에는 인터넷 기본 경로를 추가하지 않는다. RDS Standby는 읽기용 복제본으로 표시하지 않는다.
+
+공식 참고 자료, 확인일 2026-10-12:
+- [AWS VPC의 프라이빗 서버와 NAT 구성](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-example-private-subnets-nat.html)
+- [VPC 라우팅 테이블](https://docs.aws.amazon.com/vpc/latest/userguide/subnet-route-tables.html)
+- [ALB 대상 그룹과 gRPC 프로토콜](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html)
+- [RDS Multi-AZ의 Primary와 Standby](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZSingleStandby.html)
