@@ -155,7 +155,7 @@ export default function App() {
             <ul className="ae-bullets">
               <li>GCP의 데이터 수집 서비스와 AWS의 백엔드를 분리하고 gRPC로 연결</li>
               <li>서비스별 Dockerfile과 Docker Compose로 의존성과 실행 설정 관리</li>
-              <li>각 서비스의 독립 배포 구성, EC2는 퍼블릭 서브넷에 배치하고 RDS는 프라이빗 서브넷에 분리</li>
+              <li>각 서비스를 독립적으로 배포하고, 애플리케이션 서버와 데이터베이스를 분리해 구성</li>
               <li>EC2를 서로 다른 가용영역에 분산하고, RDS Multi-AZ로 Primary와 Standby 구성</li>
             </ul>
           </Paragraph>
